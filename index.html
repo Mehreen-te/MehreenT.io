@@ -7,192 +7,349 @@
 
   <style>
     *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
 
-    body{
-      font-family: Arial, sans-serif;
-      background:#f4f7fb;
-      color:#222;
-      line-height:1.7;
-    }
+body{
+  font-family: Arial, sans-serif;
+  background:#f6f3fb;
+  color:#222;
+  line-height:1.6;
+  overflow-x:hidden;
+}
 
-    header{
-      background:linear-gradient(135deg,#3b2f63,#6c63a8);
-      color:white;
-      padding:80px 20px;
-    }
+/* NAVBAR */
 
-    .hero{
-      max-width:1100px;
-      margin:auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:50px;
-      flex-wrap:wrap;
-    }
+nav{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(12px);
+  padding:14px;
+  text-align:center;
+  box-shadow:0 2px 15px rgba(0,0,0,0.06);
+}
 
-    .hero-text{
-      flex:1;
-      min-width:280px;
-    }
+nav a{
+  text-decoration:none;
+  color:#503d78;
+  margin:0 14px;
+  font-weight:bold;
+  transition:0.3s;
+  font-size:15px;
+}
 
-    .hero-text h1{
-      font-size:3.2rem;
-      margin-bottom:15px;
-    }
+nav a:hover{
+  color:#8b6fd6;
+}
 
-    .hero-text p{
-      font-size:1.1rem;
-      max-width:650px;
-    }
+/* HERO */
 
-    .hero-image{
-      flex:1;
-      text-align:center;
-    }
+header{
+  min-height:92vh;
+  background:
+  linear-gradient(
+    135deg,
+    #4d3b72,
+    #7c67b7
+  );
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+}
 
-    .hero-image img{
-      width:320px;
-      height:320px;
-      object-fit:cover;
-      border-radius:20px;
-      border:5px solid rgba(255,255,255,0.2);
-      box-shadow:0 10px 30px rgba(0,0,0,0.3);
-    }
+.hero-container{
+  max-width:1150px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+  flex-wrap:wrap;
+}
 
-    nav{
-      background:white;
-      padding:18px;
-      text-align:center;
-      position:sticky;
-      top:0;
-      z-index:100;
-      box-shadow:0 2px 12px rgba(0,0,0,0.08);
-    }
+.hero-image img{
+  width:320px;
+  height:320px;
+  object-fit:cover;
+  border-radius:30px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.25);
+  border:4px solid rgba(255,255,255,0.2);
 
-    nav a{
-      text-decoration:none;
-      margin:0 15px;
-      color:#3b2f63;
-      font-weight:bold;
-      transition:0.3s;
-    }
+  animation:float 4s ease-in-out infinite;
+}
 
-    nav a:hover{
-      color:#6c63a8;
-    }
+@keyframes float{
+  0%{
+    transform:translateY(0px);
+  }
 
-    section{
-      max-width:1100px;
-      margin:auto;
-      padding:70px 20px;
-    }
+  50%{
+    transform:translateY(-12px);
+  }
 
-    h2{
-      font-size:2.2rem;
-      margin-bottom:30px;
-      color:#3b2f63;
-      border-left:6px solid #6c63a8;
-      padding-left:15px;
-    }
+  100%{
+    transform:translateY(0px);
+  }
+}
 
-    .card{
-      background:white;
-      padding:30px;
-      border-radius:16px;
-      margin-bottom:25px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.08);
-    }
+.hero-text{
+  flex:1;
+  min-width:300px;
 
-    .card h3{
-      color:#3b2f63;
-      margin-bottom:10px;
-    }
+  animation:fadeIn 1s ease;
+}
 
-    .date{
-      color:#666;
-      margin-bottom:15px;
-      font-size:0.95rem;
-    }
+.hero-text h1{
+  font-size:4rem;
+  margin-bottom:12px;
+  line-height:1.1;
+}
 
-    ul{
-      padding-left:20px;
-    }
+.tagline{
+  font-size:1rem;
+  opacity:0.9;
+  margin-bottom:20px;
+  letter-spacing:1px;
+}
 
-    li{
-      margin-bottom:10px;
-    }
+.hero-text p{
+  max-width:650px;
+  font-size:1.05rem;
+}
 
-    .skills{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-    }
+.hero-buttons{
+  margin-top:30px;
+}
 
-    .skill{
-      background:#6c63a8;
-      color:white;
-      padding:10px 16px;
-      border-radius:30px;
-      font-size:14px;
-    }
+.hero-buttons a{
+  display:inline-block;
+  margin-right:15px;
+  text-decoration:none;
+  background:white;
+  color:#503d78;
+  padding:12px 22px;
+  border-radius:35px;
+  font-weight:bold;
+  transition:0.3s;
+}
 
-    .achievement-gallery{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-      margin-top:30px;
-    }
+.hero-buttons a:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
 
-    .placeholder{
-      height:220px;
-      background:#dfe8f5;
-      border-radius:15px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#666;
-      font-weight:bold;
-    }
+/* SECTION */
 
-    footer{
-      background:#3b2f63;
-      color:white;
-      text-align:center;
-      padding:35px 20px;
-      margin-top:50px;
-    }
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:45px 20px;
+}
 
-    .contact a{
-      color:#6c63a8;
-      text-decoration:none;
-    }
+h2{
+  font-size:2rem;
+  margin-bottom:22px;
+  color:#503d78;
+  position:relative;
+}
 
-    @media(max-width:768px){
+h2::after{
+  content:'';
+  width:70px;
+  height:4px;
+  background:#8b6fd6;
+  position:absolute;
+  left:0;
+  bottom:-8px;
+  border-radius:10px;
+}
 
-      .hero{
-        text-align:center;
-      }
+/* CARDS */
 
-      .hero-text h1{
-        font-size:2.4rem;
-      }
+.card{
+  background:white;
+  padding:24px;
+  margin-bottom:18px;
+  border-radius:22px;
 
-      .hero-image img{
-        width:250px;
-        height:250px;
-      }
+  box-shadow:
+  0 8px 20px rgba(0,0,0,0.06);
 
-      nav a{
-        display:inline-block;
-        margin:8px;
-      }
-    }
+  transition:0.4s;
+
+  animation:fadeUp 0.8s ease;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+.card h3{
+  color:#503d78;
+  margin-bottom:8px;
+}
+
+.date{
+  color:#777;
+  font-size:0.95rem;
+  margin-bottom:12px;
+}
+
+.card ul{
+  padding-left:18px;
+}
+
+.card li{
+  margin-bottom:8px;
+}
+
+/* SKILLS */
+
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.skill{
+  background:#8b6fd6;
+  color:white;
+  padding:10px 16px;
+  border-radius:30px;
+  font-size:14px;
+}
+
+/* ACHIEVEMENT CAROUSEL */
+
+.carousel{
+  margin-top:30px;
+  width:100%;
+  overflow:hidden;
+  border-radius:22px;
+  position:relative;
+}
+
+.carousel-track{
+  display:flex;
+  width:300%;
+  animation:slide 12s infinite;
+}
+
+.carousel-track img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+}
+
+@keyframes slide{
+
+  0%{
+    transform:translateX(0);
+  }
+
+  30%{
+    transform:translateX(0);
+  }
+
+  35%{
+    transform:translateX(-100%);
+  }
+
+  65%{
+    transform:translateX(-100%);
+  }
+
+  70%{
+    transform:translateX(-200%);
+  }
+
+  100%{
+    transform:translateX(-200%);
+  }
+
+}
+
+/* CONTACT */
+
+.contact a{
+  color:#8b6fd6;
+  text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+  background:#503d78;
+  color:white;
+  text-align:center;
+  padding:28px;
+  margin-top:40px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn{
+
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(35px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .hero-container{
+    text-align:center;
+    justify-content:center;
+  }
+
+  .hero-text h1{
+    font-size:2.7rem;
+  }
+
+  .hero-image img{
+    width:250px;
+    height:250px;
+  }
+
+  nav a{
+    display:inline-block;
+    margin:8px;
+  }
+
+  .carousel-track img{
+    height:250px;
+  }
+
+}
 
   </style>
 </head>
@@ -201,31 +358,41 @@
 
   <header>
 
-    <div class="hero">
+  <div class="hero-container">
 
-      <div class="hero-text">
+    <div class="hero-image">
 
-        <h1>Mehreen Tabassum</h1>
+      <img src="profile.jpg.jpeg" alt="Mehreen Tabassum">
 
-        <p>
-          Electrical & Electronic Engineering graduate with professional experience in
-          enterprise networking, ICT solutions, and technical presales engineering.
-          Passionate about data science, machine learning, information security,
-          sustainability-focused research, and technology-driven problem solving.
-        </p>
+    </div>
 
-      </div>
+    <div class="hero-text">
 
-      <div class="hero-image">
+      <h1>Mehreen Tabassum</h1>
 
-        <!-- Save your image as profile.jpg in same folder -->
-        <img src="profile.jpg.jpeg" alt="Mehreen Tabassum">
+      <p class="tagline">
+        Engineer • Research Enthusiast • Technology Professional
+      </p>
+
+      <p>
+        Electrical & Electronic Engineering graduate currently pursuing
+        MSc in Management of Technology at IAT, BUET.
+        Interested in renewable energy, AI, machine learning,
+        data analytics, and enterprise networking.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#research">Research</a>
+        <a href="#achievements">Achievements</a>
 
       </div>
 
     </div>
 
-  </header>
+  </div>
+
+</header>
 
   <nav>
     <a href="#about">About</a>
@@ -555,22 +722,14 @@
 
       </ul>
 
-      <div class="achievement-gallery">
-
-        <div class="placeholder">
-          Add Achievement Photo
+      <div class="carousel">
+        
+        <div class="carousel-track">
+          <img src="ach1.jpg">
+          <img src="ach2.jpg">
+          <img src="ach3.jpg">
         </div>
-
-        <div class="placeholder">
-          Add Conference / Event Photo
-        </div>
-
-        <div class="placeholder">
-          Add Award Photo
-        </div>
-
       </div>
-
     </div>
 
   </section>
@@ -583,7 +742,7 @@
 
       <p>Email: mehreen.te@gmail.com</p>
 
-      <p>Location: Uttara, Dhaka, Bangladesh</p>
+      <p>Location: Dhaka, Bangladesh</p>
 
       <br>
 
