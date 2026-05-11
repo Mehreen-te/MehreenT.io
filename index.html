@@ -19,16 +19,31 @@
 
     body{
 
-      font-family:Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
 
       background:
-      radial-gradient(circle at top left, #8f77d9 0%, transparent 30%),
-      radial-gradient(circle at bottom right, #c9b7ff 0%, transparent 25%),
-      #f6f3fb;
+      linear-gradient(
+        180deg,
+        #f8f6f3 0%,
+        #f2ede7 100%
+      );
 
-      color:#222;
-      line-height:1.6;
+      color:#2d2d2d;
+
+      line-height:1.7;
+
       overflow-x:hidden;
+    }
+
+    /* SMOOTH SCROLLBAR */
+
+    ::-webkit-scrollbar{
+      width:8px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+      background:#b8a89a;
+      border-radius:20px;
     }
 
     /* NAVBAR */
@@ -36,48 +51,55 @@
     nav{
 
       position:fixed;
-      top:20px;
+      top:18px;
       left:50%;
+
       transform:translateX(-50%);
+
+      width:auto;
+
       z-index:999;
 
-      background:rgba(255,255,255,0.78);
+      background:rgba(255,255,255,0.72);
+
       backdrop-filter:blur(12px);
 
-      padding:12px 20px;
+      border:1px solid rgba(255,255,255,0.4);
 
       border-radius:50px;
 
-      display:flex;
-      gap:18px;
+      padding:10px 18px;
 
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      display:flex;
+      gap:10px;
+
+      box-shadow:0 8px 30px rgba(0,0,0,0.05);
     }
 
     nav a{
 
       text-decoration:none;
-      color:#4f3b78;
-      font-weight:bold;
 
-      padding:10px 16px;
+      color:#65584c;
+
+      font-size:14px;
+
+      padding:10px 14px;
 
       border-radius:25px;
 
-      transition:0.3s;
-      font-size:14px;
+      transition:0.3s ease;
     }
 
     nav a.active{
 
-      background:#6f56b3;
-      color:white;
+      background:#ded3c8;
 
-      box-shadow:0 6px 15px rgba(111,86,179,0.35);
+      color:#3d342c;
     }
 
     nav a:hover{
-      background:#ede8ff;
+      background:#eee5dc;
     }
 
     /* HERO */
@@ -86,91 +108,67 @@
 
       min-height:100vh;
 
-      background:
-      linear-gradient(
-        135deg,
-        rgba(77,59,114,0.95),
-        rgba(124,103,183,0.92)
-      );
-
-      position:relative;
-
-      overflow:hidden;
-
-      color:white;
-
       display:flex;
       align-items:center;
       justify-content:center;
 
-      padding:40px 20px;
+      padding:80px 20px 40px;
+
+      position:relative;
+
+      overflow:hidden;
     }
 
-    .blob{
+    .gradient-bg{
+
       position:absolute;
-      border-radius:50%;
-      filter:blur(70px);
-      opacity:0.4;
-      animation:move 10s infinite alternate;
+
+      inset:0;
+
+      background:
+      radial-gradient(circle at top left,
+      rgba(198,177,158,0.35),
+      transparent 28%),
+
+      radial-gradient(circle at bottom right,
+      rgba(170,154,140,0.28),
+      transparent 25%);
+
+      z-index:0;
     }
 
-    .blob1{
-      width:300px;
-      height:300px;
-      background:#b69cff;
-      top:-80px;
-      left:-50px;
-    }
-
-    .blob2{
-      width:250px;
-      height:250px;
-      background:#ffffff;
-      bottom:-80px;
-      right:-50px;
-    }
-
-    @keyframes move{
-
-      from{
-        transform:translateY(0px) translateX(0px);
-      }
-
-      to{
-        transform:translateY(30px) translateX(20px);
-      }
-
-    }
-
-    .hero-container{
+    .hero{
 
       max-width:1150px;
+
+      width:100%;
 
       display:flex;
       align-items:center;
       justify-content:space-between;
 
-      gap:60px;
+      gap:80px;
+
       flex-wrap:wrap;
 
       position:relative;
+
       z-index:2;
     }
 
     .hero-image img{
 
-      width:320px;
-      height:320px;
+      width:340px;
+      height:340px;
 
       object-fit:cover;
 
-      border-radius:30px;
+      border-radius:28px;
 
-      border:4px solid rgba(255,255,255,0.2);
+      box-shadow:
+      0 20px 45px rgba(0,0,0,0.12);
 
-      box-shadow:0 20px 40px rgba(0,0,0,0.25);
-
-      animation:float 4s ease-in-out infinite;
+      animation:float 5s ease-in-out infinite;
     }
 
     @keyframes float{
@@ -180,7 +178,7 @@
       }
 
       50%{
-        transform:translateY(-12px);
+        transform:translateY(-10px);
       }
 
       100%{
@@ -192,65 +190,41 @@
     .hero-text{
 
       flex:1;
-      min-width:300px;
-
-      animation:fadeIn 1s ease;
+      min-width:320px;
     }
 
     .hero-text h1{
 
-      font-size:4rem;
-      line-height:1.1;
+      font-size:4.3rem;
+
+      line-height:1.05;
+
+      color:#3d342c;
 
       margin-bottom:14px;
     }
 
-    .tagline{
+    .hero-text .subtitle{
 
-      margin-bottom:18px;
-      opacity:0.92;
+      color:#8d7f72;
+
+      margin-bottom:26px;
 
       letter-spacing:1px;
+
+      font-size:0.95rem;
     }
 
     .hero-text p{
 
       max-width:650px;
-      font-size:1.05rem;
+
+      font-size:1.08rem;
+
+      color:#4b433d;
     }
 
-    .hero-buttons{
-      margin-top:30px;
-    }
-
-    .hero-buttons a{
-
-      display:inline-block;
-
-      text-decoration:none;
-
-      background:white;
-      color:#503d78;
-
-      padding:12px 22px;
-
-      border-radius:35px;
-
-      font-weight:bold;
-
-      margin-right:14px;
-
-      transition:0.3s;
-    }
-
-    .hero-buttons a:hover{
-
-      transform:translateY(-4px);
-
-      box-shadow:0 10px 25px rgba(0,0,0,0.15);
-    }
-
-    /* SECTIONS */
+    /* SECTION */
 
     section{
 
@@ -258,16 +232,16 @@
 
       margin:auto;
 
-      padding:45px 20px;
+      padding:60px 20px;
     }
 
     h2{
 
       font-size:2rem;
 
-      margin-bottom:22px;
+      margin-bottom:28px;
 
-      color:#503d78;
+      color:#3d342c;
 
       position:relative;
     }
@@ -276,57 +250,65 @@
 
       content:'';
 
-      width:70px;
-      height:4px;
+      width:65px;
+      height:3px;
 
-      background:#8b6fd6;
+      background:#b8a89a;
 
       position:absolute;
 
       left:0;
-      bottom:-8px;
+      bottom:-10px;
 
-      border-radius:10px;
+      border-radius:20px;
     }
 
-    /* CARDS */
+    /* CARD */
 
     .card{
 
-      background:white;
+      background:rgba(255,255,255,0.7);
 
-      padding:24px;
+      backdrop-filter:blur(10px);
+
+      border:1px solid rgba(255,255,255,0.4);
+
+      border-radius:24px;
+
+      padding:28px;
 
       margin-bottom:18px;
 
-      border-radius:22px;
-
       box-shadow:
-      0 8px 20px rgba(0,0,0,0.06);
+      0 10px 35px rgba(0,0,0,0.04);
 
-      transition:0.4s;
-
-      animation:fadeUp 0.8s ease;
+      transition:0.35s ease;
     }
 
     .card:hover{
-      transform:translateY(-6px);
+
+      transform:translateY(-4px);
+
+      box-shadow:
+      0 15px 45px rgba(0,0,0,0.07);
     }
 
     .card h3{
 
-      color:#503d78;
+      color:#4a4038;
 
       margin-bottom:8px;
+
+      font-size:1.25rem;
     }
 
     .date{
 
-      color:#777;
+      color:#938679;
 
       font-size:0.95rem;
 
-      margin-bottom:12px;
+      margin-bottom:14px;
     }
 
     .card ul{
@@ -334,46 +316,30 @@
     }
 
     .card li{
-      margin-bottom:8px;
+      margin-bottom:10px;
     }
 
-    /* EDUCATION COMPACT */
+    /* EDUCATION */
 
-    .compact-card{
-      padding:18px 24px;
+    .education-grid{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
     }
 
-    .edu-row{
+    .mini-edu{
 
       display:flex;
       justify-content:space-between;
       align-items:center;
 
-      padding:10px 0;
+      padding-top:8px;
+
+      color:#5f544b;
     }
 
-    .edu-row h4{
-
-      color:#503d78;
-
-      margin-bottom:4px;
-    }
-
-    .edu-row p{
-
-      color:#666;
-      font-size:14px;
-    }
-
-    .compact-card hr{
-
-      border:none;
-
-      height:1px;
-
-      background:#ece7f8;
-
-      margin:6px 0;
+    .mini-edu small{
+      color:#9b8d80;
     }
 
     /* SKILLS */
@@ -384,14 +350,17 @@
       flex-wrap:wrap;
 
       gap:10px;
+
+      margin-top:18px;
     }
 
     .skill{
 
-      background:#8b6fd6;
-      color:white;
+      background:#e6ddd4;
 
-      padding:10px 16px;
+      color:#5c5045;
+
+      padding:10px 15px;
 
       border-radius:30px;
 
@@ -402,13 +371,13 @@
 
     .carousel{
 
-      margin-top:30px;
-
       width:100%;
 
       overflow:hidden;
 
       border-radius:22px;
+
+      margin-top:28px;
 
       position:relative;
     }
@@ -419,14 +388,14 @@
 
       width:300%;
 
-      animation:slide 12s infinite;
+      animation:slide 14s infinite;
     }
 
     .carousel-track img{
 
       width:100%;
 
-      height:420px;
+      height:450px;
 
       object-fit:cover;
     }
@@ -437,19 +406,19 @@
         transform:translateX(0);
       }
 
-      30%{
+      28%{
         transform:translateX(0);
       }
 
-      35%{
+      33%{
         transform:translateX(-100%);
       }
 
-      65%{
+      61%{
         transform:translateX(-100%);
       }
 
-      70%{
+      66%{
         transform:translateX(-200%);
       }
 
@@ -463,7 +432,8 @@
 
     .contact a{
 
-      color:#8b6fd6;
+      color:#7f6d5e;
+
       text-decoration:none;
     }
 
@@ -471,45 +441,13 @@
 
     footer{
 
-      background:#503d78;
-
-      color:white;
-
       text-align:center;
 
-      padding:28px;
+      padding:30px;
 
-      margin-top:40px;
-    }
+      color:#7f7267;
 
-    /* ANIMATION */
-
-    @keyframes fadeIn{
-
-      from{
-        opacity:0;
-        transform:translateY(20px);
-      }
-
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
-
-    }
-
-    @keyframes fadeUp{
-
-      from{
-        opacity:0;
-        transform:translateY(35px);
-      }
-
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
-
+      font-size:14px;
     }
 
     /* MOBILE */
@@ -518,39 +456,40 @@
 
       nav{
 
-        width:95%;
+        width:92%;
 
         overflow-x:auto;
 
         justify-content:flex-start;
-
-        padding:10px 16px;
       }
 
-      .hero-container{
+      .hero{
 
         text-align:center;
 
         justify-content:center;
+
+        gap:40px;
+      }
+
+      .hero-image img{
+
+        width:260px;
+        height:260px;
       }
 
       .hero-text h1{
         font-size:2.8rem;
       }
 
-      .hero-image img{
-
-        width:250px;
-        height:250px;
-      }
-
       .carousel-track img{
-        height:250px;
+        height:260px;
       }
 
-      .edu-row{
+      .mini-edu{
         flex-direction:column;
         align-items:flex-start;
+        gap:4px;
       }
 
     }
@@ -561,7 +500,7 @@
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- NAVBAR -->
 
   <nav>
 
@@ -574,14 +513,13 @@
 
   </nav>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
 
   <header>
 
-    <div class="blob blob1"></div>
-    <div class="blob blob2"></div>
+    <div class="gradient-bg"></div>
 
-    <div class="hero-container">
+    <div class="hero">
 
       <div class="hero-image">
 
@@ -593,7 +531,7 @@
 
         <h1>Mehreen Tabassum</h1>
 
-        <p class="tagline">
+        <p class="subtitle">
           Engineer • Research Enthusiast • Technology Professional
         </p>
 
@@ -601,17 +539,10 @@
 
           Electrical & Electronic Engineering graduate currently pursuing
           MSc in Management of Technology at IAT, BUET.
-          Interested in renewable energy, AI, machine learning,
-          data analytics, and enterprise networking.
+          Interested in renewable energy, artificial intelligence,
+          machine learning, data analytics, and enterprise networking.
 
         </p>
-
-        <div class="hero-buttons">
-
-          <a href="#research">Research</a>
-          <a href="#achievements">Achievements</a>
-
-        </div>
 
       </div>
 
@@ -641,7 +572,8 @@
       <p>
 
         Passionate about interdisciplinary research involving renewable energy,
-        data analytics, AI, machine learning, sustainability, and technology-driven systems.
+        data analytics, AI, machine learning, sustainability,
+        and technology-driven systems.
 
       </p>
 
@@ -655,74 +587,74 @@
 
     <h2>Education</h2>
 
-    <div class="card">
+    <div class="education-grid">
 
-      <h3>
-        MSc in Management of Technology
-      </h3>
+      <div class="card">
 
-      <p class="date">
-        Institute of Appropriate Technology (IAT), BUET | Oct 2025 – Present
-      </p>
+        <h3>
+          MSc in Management of Technology
+        </h3>
 
-      <p>
-        CGPA: 4.00 / 4.00 (up to 2nd Semester)
-      </p>
+        <p class="date">
+          Institute of Appropriate Technology (IAT), BUET | Oct 2025 – Present
+        </p>
 
-    </div>
-
-    <div class="card">
-
-      <h3>
-        BSc in Electrical & Electronic Engineering
-      </h3>
-
-      <p class="date">
-        RUET | 2019 – 2024
-      </p>
-
-      <p>
-        CGPA: 3.68 / 4.00
-      </p>
-
-    </div>
-
-    <div class="card compact-card">
-
-      <div class="edu-row">
-
-        <div>
-
-          <h4>HSC</h4>
-
-          <p>
-            Rajuk Uttara Model College
-          </p>
-
-        </div>
-
-        <div>
-          GPA 5.00
-        </div>
+        <p>
+          CGPA: 4.00 / 4.00 (up to 2nd Semester)
+        </p>
 
       </div>
 
-      <hr>
+      <div class="card">
 
-      <div class="edu-row">
+        <h3>
+          BSc in Electrical & Electronic Engineering
+        </h3>
 
-        <div>
+        <p class="date">
+          RUET | 2019 – 2024
+        </p>
 
-          <h4>SSC</h4>
+        <p>
+          CGPA: 3.68 / 4.00
+        </p>
 
-          <p>
-            Rajuk Uttara Model College
-          </p>
+      </div>
+
+      <div class="card">
+
+        <div class="mini-edu">
+
+          <div>
+
+            <strong>Higher Secondary Certificate (HSC)</strong>
+            <br>
+            <small>Rajuk Uttara Model College</small>
+
+          </div>
+
+          <div>
+            GPA 5.00
+          </div>
 
         </div>
 
-        <div>
-          GPA 5.00
+        <hr style="margin:16px 0;border:none;height:1px;background:#ece5de;">
+
+        <div class="mini-edu">
+
+          <div>
+
+            <strong>Secondary School Certificate (SSC)</strong>
+            <br>
+            <small>Rajuk Uttara Model College</small>
+
+          </div>
+
+          <div>
+            GPA 5.00
+          </div>
+
         </div>
 
       </div>
@@ -740,7 +672,7 @@
     <div class="card">
 
       <h3>
-        Technical Presales Engineer
+        Technical Presales Engineer (Data Communication)
       </h3>
 
       <p class="date">
@@ -750,19 +682,28 @@
       <ul>
 
         <li>
-          Enterprise networking requirement analysis and solution design
+          Analyze enterprise networking requirements and transform
+          business needs into structured technical solutions and system architectures.
         </li>
 
         <li>
-          RFP compliance and proposal preparation
+          Prepare technical proposals, RFP compliance matrices,
+          comparative analyses, and solution documentation.
         </li>
 
         <li>
-          BOQ preparation and technical benchmarking
+          Conduct pricing validation, BOQ preparation,
+          and technical benchmarking for enterprise solutions.
         </li>
 
         <li>
-          Partner technical enablement sessions
+          Deliver technical knowledge-sharing and enablement sessions
+          for partners and stakeholders.
+        </li>
+
+        <li>
+          Work closely with enterprise networking technologies
+          and ICT infrastructure ecosystems.
         </li>
 
       </ul>
@@ -782,15 +723,23 @@
       <ul>
 
         <li>
-          Enterprise ICT solution planning
+          Collaborated with enterprise clients to assess
+          infrastructure modernization and digital transformation requirements.
         </li>
 
         <li>
-          Infrastructure transformation assessment
+          Worked alongside technical and solution teams
+          to develop customized ICT solutions.
         </li>
 
         <li>
-          Technical-business coordination
+          Gained exposure to enterprise networking concepts,
+          large-scale ICT ecosystems, and system-level integration.
+        </li>
+
+        <li>
+          Participated in technical-business coordination
+          and enterprise solution planning activities.
         </li>
 
       </ul>
@@ -808,17 +757,42 @@
     <div class="card">
 
       <h3>
-        Early-Stage Dementia Prediction using Machine Learning
+        Enhanced System for Predicting Early-Stage Dementia and Predictive Insights from Multivariate Analysis
       </h3>
+
+      <p class="date">
+        Undergraduate Thesis
+      </p>
 
       <p>
 
-        Research involving multivariate analysis and predictive modeling
-        using machine learning techniques on demographic and clinical datasets.
+        Conducted machine learning-based research focused on predicting
+        early-stage dementia using multivariate demographic and clinical datasets.
+        The research utilized datasets with multiple predictive attributes
+        and involved comparative analysis of multiple ML models.
 
       </p>
 
       <br>
+
+      <ul>
+
+        <li>
+          Applied machine learning algorithms for predictive modeling
+          and comparative performance evaluation.
+        </li>
+
+        <li>
+          Performed preprocessing, feature analysis,
+          visualization, and model validation.
+        </li>
+
+        <li>
+          Extracted predictive insights and evaluated model applicability
+          for clinical decision support systems.
+        </li>
+
+      </ul>
 
       <div class="skills">
 
@@ -834,17 +808,40 @@
     <div class="card">
 
       <h3>
-        Temperature Effects on Photovoltaic Systems
+        Evaluating Environmental Impacts and Proposed Solutions for Temperature Effects of Photovoltaic Systems
       </h3>
+
+      <p class="date">
+        Conference Paper — ICPS 2023
+      </p>
 
       <p>
 
-        Conference research focused on renewable energy sustainability
-        and photovoltaic efficiency analysis.
+        Research focused on evaluating the effects of environmental
+        temperature on photovoltaic system performance and identifying
+        sustainable mitigation approaches for renewable energy systems.
 
       </p>
 
       <br>
+
+      <ul>
+
+        <li>
+          Conducted on-site data collection from installed photovoltaic systems.
+        </li>
+
+        <li>
+          Performed preprocessing and analytical evaluation
+          of temperature-dependent efficiency variations.
+        </li>
+
+        <li>
+          Proposed practical recommendations to improve
+          photovoltaic system reliability and sustainability.
+        </li>
+
+      </ul>
 
       <div class="skills">
 
@@ -874,7 +871,11 @@
         </li>
 
         <li>
-          Huawei Seeds Tour & MWC 2024 Barcelona — National Nominee
+          Represented Bangladesh at the Global Round in Thailand
+        </li>
+
+        <li>
+          Huawei Seeds Tour & MWC 2024 Barcelona — National Nominee from Bangladesh
         </li>
 
         <li>
@@ -890,6 +891,8 @@
         </li>
 
       </ul>
+
+      <!-- ADD YOUR IMAGES HERE -->
 
       <div class="carousel">
 
@@ -961,7 +964,7 @@
 
   </footer>
 
-  <!-- ACTIVE NAVIGATION -->
+  <!-- ACTIVE NAV -->
 
   <script>
 
