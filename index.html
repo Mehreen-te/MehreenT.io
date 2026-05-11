@@ -1,408 +1,625 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Mehreen Tabassum | Portfolio</title>
 
   <style>
+
     *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family: Arial, sans-serif;
-  background:#f6f3fb;
-  color:#222;
-  line-height:1.6;
-  overflow-x:hidden;
-}
-
-/* NAVBAR */
-
-nav{
-  position:sticky;
-  top:0;
-  z-index:999;
-  background:rgba(255,255,255,0.92);
-  backdrop-filter:blur(12px);
-  padding:14px;
-  text-align:center;
-  box-shadow:0 2px 15px rgba(0,0,0,0.06);
-}
-
-nav a{
-  text-decoration:none;
-  color:#503d78;
-  margin:0 14px;
-  font-weight:bold;
-  transition:0.3s;
-  font-size:15px;
-}
-
-nav a:hover{
-  color:#8b6fd6;
-}
-
-/* HERO */
-
-header{
-  min-height:92vh;
-  background:
-  linear-gradient(
-    135deg,
-    #4d3b72,
-    #7c67b7
-  );
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:40px 20px;
-}
-
-.hero-container{
-  max-width:1150px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:60px;
-  flex-wrap:wrap;
-}
-
-.hero-image img{
-  width:320px;
-  height:320px;
-  object-fit:cover;
-  border-radius:30px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.25);
-  border:4px solid rgba(255,255,255,0.2);
-
-  animation:float 4s ease-in-out infinite;
-}
-
-@keyframes float{
-  0%{
-    transform:translateY(0px);
-  }
-
-  50%{
-    transform:translateY(-12px);
-  }
-
-  100%{
-    transform:translateY(0px);
-  }
-}
-
-.hero-text{
-  flex:1;
-  min-width:300px;
-
-  animation:fadeIn 1s ease;
-}
-
-.hero-text h1{
-  font-size:4rem;
-  margin-bottom:12px;
-  line-height:1.1;
-}
-
-.tagline{
-  font-size:1rem;
-  opacity:0.9;
-  margin-bottom:20px;
-  letter-spacing:1px;
-}
-
-.hero-text p{
-  max-width:650px;
-  font-size:1.05rem;
-}
-
-.hero-buttons{
-  margin-top:30px;
-}
-
-.hero-buttons a{
-  display:inline-block;
-  margin-right:15px;
-  text-decoration:none;
-  background:white;
-  color:#503d78;
-  padding:12px 22px;
-  border-radius:35px;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.hero-buttons a:hover{
-  transform:translateY(-4px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* SECTION */
-
-section{
-  max-width:1100px;
-  margin:auto;
-  padding:45px 20px;
-}
-
-h2{
-  font-size:2rem;
-  margin-bottom:22px;
-  color:#503d78;
-  position:relative;
-}
-
-h2::after{
-  content:'';
-  width:70px;
-  height:4px;
-  background:#8b6fd6;
-  position:absolute;
-  left:0;
-  bottom:-8px;
-  border-radius:10px;
-}
-
-/* CARDS */
-
-.card{
-  background:white;
-  padding:24px;
-  margin-bottom:18px;
-  border-radius:22px;
-
-  box-shadow:
-  0 8px 20px rgba(0,0,0,0.06);
-
-  transition:0.4s;
-
-  animation:fadeUp 0.8s ease;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-}
-
-.card h3{
-  color:#503d78;
-  margin-bottom:8px;
-}
-
-.date{
-  color:#777;
-  font-size:0.95rem;
-  margin-bottom:12px;
-}
-
-.card ul{
-  padding-left:18px;
-}
-
-.card li{
-  margin-bottom:8px;
-}
-
-/* SKILLS */
-
-.skills{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.skill{
-  background:#8b6fd6;
-  color:white;
-  padding:10px 16px;
-  border-radius:30px;
-  font-size:14px;
-}
-
-/* ACHIEVEMENT CAROUSEL */
-
-.carousel{
-  margin-top:30px;
-  width:100%;
-  overflow:hidden;
-  border-radius:22px;
-  position:relative;
-}
-
-.carousel-track{
-  display:flex;
-  width:300%;
-  animation:slide 12s infinite;
-}
-
-.carousel-track img{
-  width:100%;
-  height:420px;
-  object-fit:cover;
-}
-
-@keyframes slide{
-
-  0%{
-    transform:translateX(0);
-  }
-
-  30%{
-    transform:translateX(0);
-  }
-
-  35%{
-    transform:translateX(-100%);
-  }
-
-  65%{
-    transform:translateX(-100%);
-  }
-
-  70%{
-    transform:translateX(-200%);
-  }
-
-  100%{
-    transform:translateX(-200%);
-  }
-
-}
-
-/* CONTACT */
-
-.contact a{
-  color:#8b6fd6;
-  text-decoration:none;
-}
-
-/* FOOTER */
-
-footer{
-  background:#503d78;
-  color:white;
-  text-align:center;
-  padding:28px;
-  margin-top:40px;
-}
-
-/* ANIMATIONS */
-
-@keyframes fadeIn{
-
-  from{
-    opacity:0;
-    transform:translateY(20px);
-  }
-
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-
-}
-
-@keyframes fadeUp{
-
-  from{
-    opacity:0;
-    transform:translateY(35px);
-  }
-
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-  .hero-container{
-    text-align:center;
-    justify-content:center;
-  }
-
-  .hero-text h1{
-    font-size:2.7rem;
-  }
-
-  .hero-image img{
-    width:250px;
-    height:250px;
-  }
-
-  nav a{
-    display:inline-block;
-    margin:8px;
-  }
-
-  .carousel-track img{
-    height:250px;
-  }
-
-}
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+
+      font-family:Arial, sans-serif;
+
+      background:
+      radial-gradient(circle at top left, #8f77d9 0%, transparent 30%),
+      radial-gradient(circle at bottom right, #c9b7ff 0%, transparent 25%),
+      #f6f3fb;
+
+      color:#222;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    /* NAVBAR */
+
+    nav{
+
+      position:fixed;
+      top:20px;
+      left:50%;
+      transform:translateX(-50%);
+      z-index:999;
+
+      background:rgba(255,255,255,0.78);
+      backdrop-filter:blur(12px);
+
+      padding:12px 20px;
+
+      border-radius:50px;
+
+      display:flex;
+      gap:18px;
+
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    nav a{
+
+      text-decoration:none;
+      color:#4f3b78;
+      font-weight:bold;
+
+      padding:10px 16px;
+
+      border-radius:25px;
+
+      transition:0.3s;
+      font-size:14px;
+    }
+
+    nav a.active{
+
+      background:#6f56b3;
+      color:white;
+
+      box-shadow:0 6px 15px rgba(111,86,179,0.35);
+    }
+
+    nav a:hover{
+      background:#ede8ff;
+    }
+
+    /* HERO */
+
+    header{
+
+      min-height:100vh;
+
+      background:
+      linear-gradient(
+        135deg,
+        rgba(77,59,114,0.95),
+        rgba(124,103,183,0.92)
+      );
+
+      position:relative;
+
+      overflow:hidden;
+
+      color:white;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      padding:40px 20px;
+    }
+
+    .blob{
+      position:absolute;
+      border-radius:50%;
+      filter:blur(70px);
+      opacity:0.4;
+      animation:move 10s infinite alternate;
+    }
+
+    .blob1{
+      width:300px;
+      height:300px;
+      background:#b69cff;
+      top:-80px;
+      left:-50px;
+    }
+
+    .blob2{
+      width:250px;
+      height:250px;
+      background:#ffffff;
+      bottom:-80px;
+      right:-50px;
+    }
+
+    @keyframes move{
+
+      from{
+        transform:translateY(0px) translateX(0px);
+      }
+
+      to{
+        transform:translateY(30px) translateX(20px);
+      }
+
+    }
+
+    .hero-container{
+
+      max-width:1150px;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:60px;
+      flex-wrap:wrap;
+
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-image img{
+
+      width:320px;
+      height:320px;
+
+      object-fit:cover;
+
+      border-radius:30px;
+
+      border:4px solid rgba(255,255,255,0.2);
+
+      box-shadow:0 20px 40px rgba(0,0,0,0.25);
+
+      animation:float 4s ease-in-out infinite;
+    }
+
+    @keyframes float{
+
+      0%{
+        transform:translateY(0px);
+      }
+
+      50%{
+        transform:translateY(-12px);
+      }
+
+      100%{
+        transform:translateY(0px);
+      }
+
+    }
+
+    .hero-text{
+
+      flex:1;
+      min-width:300px;
+
+      animation:fadeIn 1s ease;
+    }
+
+    .hero-text h1{
+
+      font-size:4rem;
+      line-height:1.1;
+
+      margin-bottom:14px;
+    }
+
+    .tagline{
+
+      margin-bottom:18px;
+      opacity:0.92;
+
+      letter-spacing:1px;
+    }
+
+    .hero-text p{
+
+      max-width:650px;
+      font-size:1.05rem;
+    }
+
+    .hero-buttons{
+      margin-top:30px;
+    }
+
+    .hero-buttons a{
+
+      display:inline-block;
+
+      text-decoration:none;
+
+      background:white;
+      color:#503d78;
+
+      padding:12px 22px;
+
+      border-radius:35px;
+
+      font-weight:bold;
+
+      margin-right:14px;
+
+      transition:0.3s;
+    }
+
+    .hero-buttons a:hover{
+
+      transform:translateY(-4px);
+
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    /* SECTIONS */
+
+    section{
+
+      max-width:1100px;
+
+      margin:auto;
+
+      padding:45px 20px;
+    }
+
+    h2{
+
+      font-size:2rem;
+
+      margin-bottom:22px;
+
+      color:#503d78;
+
+      position:relative;
+    }
+
+    h2::after{
+
+      content:'';
+
+      width:70px;
+      height:4px;
+
+      background:#8b6fd6;
+
+      position:absolute;
+
+      left:0;
+      bottom:-8px;
+
+      border-radius:10px;
+    }
+
+    /* CARDS */
+
+    .card{
+
+      background:white;
+
+      padding:24px;
+
+      margin-bottom:18px;
+
+      border-radius:22px;
+
+      box-shadow:
+      0 8px 20px rgba(0,0,0,0.06);
+
+      transition:0.4s;
+
+      animation:fadeUp 0.8s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+    }
+
+    .card h3{
+
+      color:#503d78;
+
+      margin-bottom:8px;
+    }
+
+    .date{
+
+      color:#777;
+
+      font-size:0.95rem;
+
+      margin-bottom:12px;
+    }
+
+    .card ul{
+      padding-left:18px;
+    }
+
+    .card li{
+      margin-bottom:8px;
+    }
+
+    /* EDUCATION COMPACT */
+
+    .compact-card{
+      padding:18px 24px;
+    }
+
+    .edu-row{
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      padding:10px 0;
+    }
+
+    .edu-row h4{
+
+      color:#503d78;
+
+      margin-bottom:4px;
+    }
+
+    .edu-row p{
+
+      color:#666;
+      font-size:14px;
+    }
+
+    .compact-card hr{
+
+      border:none;
+
+      height:1px;
+
+      background:#ece7f8;
+
+      margin:6px 0;
+    }
+
+    /* SKILLS */
+
+    .skills{
+
+      display:flex;
+      flex-wrap:wrap;
+
+      gap:10px;
+    }
+
+    .skill{
+
+      background:#8b6fd6;
+      color:white;
+
+      padding:10px 16px;
+
+      border-radius:30px;
+
+      font-size:14px;
+    }
+
+    /* CAROUSEL */
+
+    .carousel{
+
+      margin-top:30px;
+
+      width:100%;
+
+      overflow:hidden;
+
+      border-radius:22px;
+
+      position:relative;
+    }
+
+    .carousel-track{
+
+      display:flex;
+
+      width:300%;
+
+      animation:slide 12s infinite;
+    }
+
+    .carousel-track img{
+
+      width:100%;
+
+      height:420px;
+
+      object-fit:cover;
+    }
+
+    @keyframes slide{
+
+      0%{
+        transform:translateX(0);
+      }
+
+      30%{
+        transform:translateX(0);
+      }
+
+      35%{
+        transform:translateX(-100%);
+      }
+
+      65%{
+        transform:translateX(-100%);
+      }
+
+      70%{
+        transform:translateX(-200%);
+      }
+
+      100%{
+        transform:translateX(-200%);
+      }
+
+    }
+
+    /* CONTACT */
+
+    .contact a{
+
+      color:#8b6fd6;
+      text-decoration:none;
+    }
+
+    /* FOOTER */
+
+    footer{
+
+      background:#503d78;
+
+      color:white;
+
+      text-align:center;
+
+      padding:28px;
+
+      margin-top:40px;
+    }
+
+    /* ANIMATION */
+
+    @keyframes fadeIn{
+
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+
+    }
+
+    @keyframes fadeUp{
+
+      from{
+        opacity:0;
+        transform:translateY(35px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      nav{
+
+        width:95%;
+
+        overflow-x:auto;
+
+        justify-content:flex-start;
+
+        padding:10px 16px;
+      }
+
+      .hero-container{
+
+        text-align:center;
+
+        justify-content:center;
+      }
+
+      .hero-text h1{
+        font-size:2.8rem;
+      }
+
+      .hero-image img{
+
+        width:250px;
+        height:250px;
+      }
+
+      .carousel-track img{
+        height:250px;
+      }
+
+      .edu-row{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+    }
 
   </style>
+
 </head>
 
 <body>
 
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#research">Research</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+
+  </nav>
+
+  <!-- HERO SECTION -->
+
   <header>
 
-  <div class="hero-container">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
 
-    <div class="hero-image">
+    <div class="hero-container">
 
-      <img src="profile.jpg.jpeg" alt="Mehreen Tabassum">
+      <div class="hero-image">
 
-    </div>
+        <img src="profile.jpg.jpeg" alt="Mehreen Tabassum">
 
-    <div class="hero-text">
+      </div>
 
-      <h1>Mehreen Tabassum</h1>
+      <div class="hero-text">
 
-      <p class="tagline">
-        Engineer • Research Enthusiast • Technology Professional
-      </p>
+        <h1>Mehreen Tabassum</h1>
 
-      <p>
-        Electrical & Electronic Engineering graduate currently pursuing
-        MSc in Management of Technology at IAT, BUET.
-        Interested in renewable energy, AI, machine learning,
-        data analytics, and enterprise networking.
-      </p>
+        <p class="tagline">
+          Engineer • Research Enthusiast • Technology Professional
+        </p>
 
-      <div class="hero-buttons">
+        <p>
 
-        <a href="#research">Research</a>
-        <a href="#achievements">Achievements</a>
+          Electrical & Electronic Engineering graduate currently pursuing
+          MSc in Management of Technology at IAT, BUET.
+          Interested in renewable energy, AI, machine learning,
+          data analytics, and enterprise networking.
+
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#research">Research</a>
+          <a href="#achievements">Achievements</a>
+
+        </div>
 
       </div>
 
     </div>
 
-  </div>
+  </header>
 
-</header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#research">Research</a>
-    <a href="#skills">Skills</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <!-- ABOUT -->
 
   <section id="about">
 
@@ -411,100 +628,110 @@ footer{
     <div class="card">
 
       <p>
-        I am an Electrical and Electronic Engineering graduate from RUET with a growing
-        professional background in enterprise networking and ICT solution development.
-        My interests lie at the intersection of technology, analytics, and sustainability.
-        Through academic research and professional exposure, I have worked on machine
-        learning applications, renewable energy analysis, enterprise solution design,
-        and technical documentation for large-scale ICT ecosystems.
+
+        Enthusiastic Electrical & Electronic Engineering graduate with
+        professional experience in enterprise networking and ICT solutions.
+        Currently working in technical presales while pursuing postgraduate
+        studies in Management of Technology.
+
       </p>
 
       <br>
 
       <p>
-        Currently working as a Technical Presales Engineer, I collaborate with enterprise
-        partners to design scalable networking solutions, prepare RFP compliance documents,
-        and support technical decision-making processes. Alongside industry experience,
-        I actively pursue research-oriented learning in data science, AI, and
-        information security.
-      </p>
-      <br>
-      <p>
-        <strong>Research Interests:</strong>
-        Renewable Energy, Data Analytics, Artificial Intelligence,
-        Machine Learning, and Sustainable Technology Systems.
+
+        Passionate about interdisciplinary research involving renewable energy,
+        data analytics, AI, machine learning, sustainability, and technology-driven systems.
+
       </p>
 
     </div>
 
   </section>
 
+  <!-- EDUCATION -->
+
   <section id="education">
 
-  <h2>Education</h2>
+    <h2>Education</h2>
 
-  <div class="card">
+    <div class="card">
 
-    <h3>
-      Institute of Appropriate Technology (IAT), BUET
-    </h3>
+      <h3>
+        MSc in Management of Technology
+      </h3>
 
-    <p class="date">
-      MSc in Management of Technology | October 2025 – Present
-    </p>
+      <p class="date">
+        Institute of Appropriate Technology (IAT), BUET | Oct 2025 – Present
+      </p>
 
-    <p>
-      CGPA: 4.00 / 4.00 (up to 2nd Semester)
-    </p>
+      <p>
+        CGPA: 4.00 / 4.00 (up to 2nd Semester)
+      </p>
 
-  </div>
+    </div>
 
-  <div class="card">
+    <div class="card">
 
-    <h3>
-      Rajshahi University of Engineering & Technology (RUET)
-    </h3>
+      <h3>
+        BSc in Electrical & Electronic Engineering
+      </h3>
 
-    <p class="date">
-      Bachelor of Science in Electrical & Electronic Engineering | 2019 – 2024
-    </p>
+      <p class="date">
+        RUET | 2019 – 2024
+      </p>
 
-    <p>
-      CGPA: 3.68 / 4.00 <br>
-      Last Semester GPA: 3.97 / 4.00
-    </p>
+      <p>
+        CGPA: 3.68 / 4.00
+      </p>
 
-  </div>
+    </div>
 
-  <div class="card">
+    <div class="card compact-card">
 
-    <h3>Rajuk Uttara Model College</h3>
+      <div class="edu-row">
 
-    <p class="date">
-      Higher Secondary Certificate (Science) | 2016 – 2018
-    </p>
+        <div>
 
-    <p>
-      GPA: 5.00 / 5.00
-    </p>
+          <h4>HSC</h4>
 
-  </div>
+          <p>
+            Rajuk Uttara Model College
+          </p>
 
-  <div class="card">
+        </div>
 
-    <h3>Rajuk Uttara Model College</h3>
+        <div>
+          GPA 5.00
+        </div>
 
-    <p class="date">
-      Secondary School Certificate (Science) | 2014 – 2016
-    </p>
+      </div>
 
-    <p>
-      GPA: 5.00 / 5.00
-    </p>
+      <hr>
 
-  </div>
+      <div class="edu-row">
 
-</section>
+        <div>
+
+          <h4>SSC</h4>
+
+          <p>
+            Rajuk Uttara Model College
+          </p>
+
+        </div>
+
+        <div>
+          GPA 5.00
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EXPERIENCE -->
 
   <section id="experience">
 
@@ -512,67 +739,58 @@ footer{
 
     <div class="card">
 
-      <h3>Technical Presales Engineer (Data Communication)</h3>
+      <h3>
+        Technical Presales Engineer
+      </h3>
 
       <p class="date">
         Inflow Technologies Singapore Pte Ltd | July 2025 – Present
       </p>
 
       <ul>
+
         <li>
-          Analyze enterprise networking requirements and transform business needs into
-          structured technical solutions and system architectures.
+          Enterprise networking requirement analysis and solution design
         </li>
 
         <li>
-          Prepare technical proposals, RFP compliance matrices, comparative analyses,
-          and solution documentation for enterprise clients.
+          RFP compliance and proposal preparation
         </li>
 
         <li>
-          Conduct pricing validation, BOQ preparation, and solution benchmarking
-          to support data-driven technical and commercial decision-making.
+          BOQ preparation and technical benchmarking
         </li>
 
         <li>
-          Deliver technical enablement and knowledge-sharing sessions for channel partners.
+          Partner technical enablement sessions
         </li>
 
-        <li>
-          Work closely with enterprise networking technologies and ICT infrastructure
-          ecosystems across different customer environments.
-        </li>
       </ul>
 
     </div>
 
     <div class="card">
 
-      <h3>Business Executive (Enterprise ICT)</h3>
+      <h3>
+        Business Executive (Enterprise ICT)
+      </h3>
 
       <p class="date">
-        Huawei Technologies (Bangladesh) Ltd. | July 2024 – June 2025
+        Huawei Technologies Bangladesh Ltd. | July 2024 – June 2025
       </p>
 
       <ul>
 
         <li>
-          Collaborated with enterprise clients to assess infrastructure modernization
-          and digital transformation requirements.
+          Enterprise ICT solution planning
         </li>
 
         <li>
-          Worked alongside technical and solution teams to develop customized ICT solutions.
+          Infrastructure transformation assessment
         </li>
 
         <li>
-          Gained hands-on exposure to enterprise networking concepts, system-level integration,
-          and large-scale ICT ecosystems.
-        </li>
-
-        <li>
-          Participated in solution planning discussions, client engagement activities,
-          and technical-business coordination.
+          Technical-business coordination
         </li>
 
       </ul>
@@ -580,132 +798,83 @@ footer{
     </div>
 
   </section>
+
+  <!-- RESEARCH -->
 
   <section id="research">
 
-    <h2>Research Experience & Publications</h2>
+    <h2>Research Experience</h2>
 
     <div class="card">
 
       <h3>
-        Enhanced System for Predicting Early-Stage Dementia and Predictive Insights
-        from Multivariate Analysis
+        Early-Stage Dementia Prediction using Machine Learning
       </h3>
 
-      <p class="date">Undergraduate Thesis</p>
-
       <p>
-        Conducted a machine learning-based research project focused on predicting
-        early-stage dementia using multivariate demographic and clinical datasets.
-        The research utilized a dataset containing 729 entries with multiple
-        predictive attributes.
+
+        Research involving multivariate analysis and predictive modeling
+        using machine learning techniques on demographic and clinical datasets.
+
       </p>
 
       <br>
 
-      <ul>
+      <div class="skills">
 
-        <li>
-          Applied multiple machine learning algorithms for predictive modeling
-          and comparative performance evaluation.
-        </li>
+        <div class="skill">Machine Learning</div>
+        <div class="skill">Python</div>
+        <div class="skill">Data Analytics</div>
+        <div class="skill">Predictive Modeling</div>
 
-        <li>
-          Performed data preprocessing, feature analysis, visualization,
-          and model validation.
-        </li>
-
-        <li>
-          Extracted predictive insights and evaluated the applicability
-          of different models for clinical decision support systems.
-        </li>
-
-      </ul>
+      </div>
 
     </div>
 
     <div class="card">
 
       <h3>
-        Evaluating Environmental Impacts and Proposed Solutions for Temperature
-        Effects of Photovoltaic Systems
+        Temperature Effects on Photovoltaic Systems
       </h3>
 
-      <p class="date">
-        Conference Paper – 10th International Conference on Power Systems (ICPS) 2023
-      </p>
-
       <p>
-        Research focused on analyzing the effects of environmental temperature
-        on photovoltaic system performance and identifying sustainable mitigation approaches.
+
+        Conference research focused on renewable energy sustainability
+        and photovoltaic efficiency analysis.
+
       </p>
 
       <br>
 
-      <ul>
+      <div class="skills">
 
-        <li>
-          Conducted on-site data collection from installed photovoltaic systems
-          at university facilities.
-        </li>
+        <div class="skill">Renewable Energy</div>
+        <div class="skill">Solar Energy</div>
+        <div class="skill">Data Analysis</div>
+        <div class="skill">Sustainability</div>
 
-        <li>
-          Performed preprocessing and analytical evaluation of temperature-dependent
-          efficiency variations.
-        </li>
-
-        <li>
-          Collaborated within a multidisciplinary research team under faculty supervision.
-        </li>
-
-        <li>
-          Proposed practical recommendations to improve photovoltaic system
-          reliability and performance sustainability.
-        </li>
-
-      </ul>
+      </div>
 
     </div>
 
   </section>
 
-  <section id="skills">
-
-    <h2>Technical Skills</h2>
-
-    <div class="skills">
-
-      <div class="skill">Python</div>
-      <div class="skill">Machine Learning</div>
-      <div class="skill">Data Analysis</div>
-      <div class="skill">Data Visualization</div>
-      <div class="skill">Enterprise Networking</div>
-      <div class="skill">Technical Documentation</div>
-      <div class="skill">Requirement Analysis</div>
-      <div class="skill">MS Office</div>
-      <div class="skill">Adobe Illustrator</div>
-      <div class="skill">LaTeX</div>
-
-    </div>
-
-  </section>
+  <!-- ACHIEVEMENTS -->
 
   <section id="achievements">
 
-    <h2>Achievements & Activities</h2>
+    <h2>Achievements</h2>
 
     <div class="card">
 
       <ul>
 
-        <li>Huawei Seeds for the Future 2022 — Top 9 Bangladesh</li>
-
         <li>
-          Represented Bangladesh at the Global Round in Thailand
+          Huawei Seeds for the Future 2022 — Top 9 Bangladesh
         </li>
 
         <li>
-          Huawei Seeds Tour & MWC 2024 Barcelona — National Nominee from Bangladesh
+          Huawei Seeds Tour & MWC 2024 Barcelona — National Nominee
         </li>
 
         <li>
@@ -723,16 +892,22 @@ footer{
       </ul>
 
       <div class="carousel">
-        
+
         <div class="carousel-track">
+
           <img src="ach1.jpg">
           <img src="ach2.jpg">
           <img src="ach3.jpg">
+
         </div>
+
       </div>
+
     </div>
 
   </section>
+
+  <!-- CONTACT -->
 
   <section id="contact">
 
@@ -740,37 +915,87 @@ footer{
 
     <div class="card contact">
 
-      <p>Email: mehreen.te@gmail.com</p>
-
-      <p>Location: Dhaka, Bangladesh</p>
+      <p>
+        <strong>Location:</strong> Dhaka, Bangladesh
+      </p>
 
       <br>
 
       <p>
-        LinkedIn:
+        <strong>Email:</strong> mehreen.te@gmail.com
+      </p>
+
+      <br>
+
+      <p>
+
+        <strong>LinkedIn:</strong>
+
         <a href="https://linkedin.com/in/mehreen-tabassum" target="_blank">
           linkedin.com/in/mehreen-tabassum
         </a>
+
       </p>
 
+      <br>
+
       <p>
-        GitHub:
+
+        <strong>GitHub:</strong>
+
         <a href="https://github.com/Mehreen-te" target="_blank">
           github.com/Mehreen-te
         </a>
+
       </p>
 
     </div>
 
   </section>
 
+  <!-- FOOTER -->
+
   <footer>
 
-    <p>
-      © 2026 Mehreen Tabassum | Portfolio Website
-    </p>
+    © 2026 Mehreen Tabassum | Portfolio Website
 
   </footer>
 
+  <!-- ACTIVE NAVIGATION -->
+
+  <script>
+
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+
+      let current = "";
+
+      sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 150;
+
+        if(pageYOffset >= sectionTop){
+          current = section.getAttribute("id");
+        }
+
+      });
+
+      navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if(link.getAttribute("href") === "#" + current){
+          link.classList.add("active");
+        }
+
+      });
+
+    });
+
+  </script>
+
 </body>
+
 </html>
