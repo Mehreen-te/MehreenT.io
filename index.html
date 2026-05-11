@@ -13,9 +13,48 @@
   scroll-behavior:smooth;
 }
 
+<script>
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+
+  let current = "";
+
+  sections.forEach(section => {
+
+    const sectionTop = section.offsetTop - 150;
+    const sectionHeight = section.clientHeight;
+
+    if(pageYOffset >= sectionTop){
+      current = section.getAttribute("id");
+    }
+
+  });
+
+  navLinks.forEach(link => {
+
+    link.classList.remove("active");
+
+    if(link.getAttribute("href") === "#" + current){
+      link.classList.add("active");
+    }
+
+  });
+
+});
+
+</script>
+    
 body{
   font-family: Arial, sans-serif;
-  background:#f6f3fb;
+
+  background:
+  radial-gradient(circle at top left, #8f77d9 0%, transparent 30%),
+  radial-gradient(circle at bottom right, #c9b7ff 0%, transparent 25%),
+  #f6f3fb;
+
   color:#222;
   line-height:1.6;
   overflow-x:hidden;
@@ -24,44 +63,72 @@ body{
 /* NAVBAR */
 
 nav{
-  position:sticky;
-  top:0;
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
   z-index:999;
-  background:rgba(255,255,255,0.92);
+
+  background:rgba(255,255,255,0.75);
   backdrop-filter:blur(12px);
-  padding:14px;
-  text-align:center;
-  box-shadow:0 2px 15px rgba(0,0,0,0.06);
+
+  padding:12px 20px;
+
+  border-radius:50px;
+
+  display:flex;
+  gap:18px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
 nav a{
   text-decoration:none;
-  color:#503d78;
-  margin:0 14px;
+  color:#4f3b78;
   font-weight:bold;
+  padding:10px 16px;
+  border-radius:25px;
   transition:0.3s;
-  font-size:15px;
+  font-size:14px;
+}
+
+/* ACTIVE SECTION HIGHLIGHT */
+
+nav a.active{
+  background:#6f56b3;
+  color:white;
+  box-shadow:0 6px 15px rgba(111,86,179,0.35);
 }
 
 nav a:hover{
-  color:#8b6fd6;
+  background:#ede8ff;
 }
 
 /* HERO */
 
 header{
-  min-height:92vh;
+  min-height:100vh;
+
   background:
   linear-gradient(
     135deg,
-    #4d3b72,
-    #7c67b7
+    rgba(77,59,114,0.95),
+    rgba(124,103,183,0.92)
   );
+
+  position:relative;
+
+  overflow:hidden;
+
   color:white;
+
   display:flex;
   align-items:center;
   justify-content:center;
+
   padding:40px 20px;
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
 }
 
 .hero-container{
@@ -350,6 +417,33 @@ footer{
   }
 
 }
+  .compact-card{
+  padding:18px 24px;
+}
+
+.edu-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 0;
+}
+
+.edu-row h4{
+  color:#503d78;
+  margin-bottom:4px;
+}
+
+.edu-row p{
+  color:#666;
+  font-size:14px;
+}
+
+.compact-card hr{
+  border:none;
+  height:1px;
+  background:#ece7f8;
+  margin:6px 0;
+}
 
   </style>
 </head>
@@ -446,11 +540,11 @@ footer{
   <div class="card">
 
     <h3>
-      Institute of Appropriate Technology (IAT), BUET
+      MSc in Management of Technology
     </h3>
 
     <p class="date">
-      MSc in Management of Technology | October 2025 – Present
+      IAT, BUET | Oct 2025 – Present
     </p>
 
     <p>
@@ -462,45 +556,50 @@ footer{
   <div class="card">
 
     <h3>
-      Rajshahi University of Engineering & Technology (RUET)
+      BSc in Electrical & Electronic Engineering
     </h3>
 
     <p class="date">
-      Bachelor of Science in Electrical & Electronic Engineering | 2019 – 2024
+      RUET | 2019 – 2024
     </p>
 
     <p>
-      CGPA: 3.68 / 4.00 <br>
-      Last Semester GPA: 3.97 / 4.00
+      CGPA: 3.68 / 4.00
     </p>
 
   </div>
 
-  <div class="card">
+  <!-- COMPACT SECTION -->
 
-    <h3>Rajuk Uttara Model College</h3>
+  <div class="card compact-card">
 
-    <p class="date">
-      Higher Secondary Certificate (Science) | 2016 – 2018
-    </p>
+    <div class="edu-row">
 
-    <p>
-      GPA: 5.00 / 5.00
-    </p>
+      <div>
+        <h4>HSC</h4>
+        <p>Rajuk Uttara Model College</p>
+      </div>
 
-  </div>
+      <div>
+        GPA 5.00
+      </div>
 
-  <div class="card">
+    </div>
 
-    <h3>Rajuk Uttara Model College</h3>
+    <hr>
 
-    <p class="date">
-      Secondary School Certificate (Science) | 2014 – 2016
-    </p>
+    <div class="edu-row">
 
-    <p>
-      GPA: 5.00 / 5.00
-    </p>
+      <div>
+        <h4>SSC</h4>
+        <p>Rajuk Uttara Model College</p>
+      </div>
+
+      <div>
+        GPA 5.00
+      </div>
+
+    </div>
 
   </div>
 
