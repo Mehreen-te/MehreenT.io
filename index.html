@@ -6,130 +6,225 @@
   <title>Mehreen Tabassum | Portfolio</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
     }
 
-    body {
+    body{
       font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #222;
-      line-height: 1.6;
+      background:#f4f7fb;
+      color:#222;
+      line-height:1.7;
     }
 
-    header {
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: white;
-      padding: 70px 20px;
-      text-align: center;
+    header{
+      background:linear-gradient(135deg,#16345f,#2d5ea8);
+      color:white;
+      padding:80px 20px;
     }
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+    .hero{
+      max-width:1100px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:50px;
+      flex-wrap:wrap;
     }
 
-    header p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: auto;
+    .hero-text{
+      flex:1;
+      min-width:280px;
     }
 
-    nav {
-      background: white;
-      padding: 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      z-index: 100;
+    .hero-text h1{
+      font-size:3.2rem;
+      margin-bottom:15px;
     }
 
-    nav a {
-      text-decoration: none;
-      color: #1e3c72;
-      margin: 0 15px;
-      font-weight: bold;
+    .hero-text p{
+      font-size:1.1rem;
+      max-width:650px;
     }
 
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 20px;
+    .hero-image{
+      flex:1;
+      text-align:center;
     }
 
-    h2 {
-      color: #1e3c72;
-      margin-bottom: 20px;
-      font-size: 2rem;
-      border-left: 5px solid #2a5298;
-      padding-left: 10px;
+    .hero-image img{
+      width:320px;
+      height:320px;
+      object-fit:cover;
+      border-radius:20px;
+      border:5px solid rgba(255,255,255,0.2);
+      box-shadow:0 10px 30px rgba(0,0,0,0.3);
     }
 
-    .card {
-      background: white;
-      padding: 25px;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    nav{
+      background:white;
+      padding:18px;
+      text-align:center;
+      position:sticky;
+      top:0;
+      z-index:100;
+      box-shadow:0 2px 12px rgba(0,0,0,0.08);
     }
 
-    .card h3 {
-      margin-bottom: 8px;
-      color: #1e3c72;
+    nav a{
+      text-decoration:none;
+      margin:0 15px;
+      color:#16345f;
+      font-weight:bold;
+      transition:0.3s;
     }
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+    nav a:hover{
+      color:#2d5ea8;
     }
 
-    .skill {
-      background: #2a5298;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 30px;
-      font-size: 14px;
+    section{
+      max-width:1100px;
+      margin:auto;
+      padding:70px 20px;
     }
 
-    footer {
-      background: #1e3c72;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 50px;
+    h2{
+      font-size:2.2rem;
+      margin-bottom:30px;
+      color:#16345f;
+      border-left:6px solid #2d5ea8;
+      padding-left:15px;
     }
 
-    .contact a {
-      color: #2a5298;
-      text-decoration: none;
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:16px;
+      margin-bottom:25px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
     }
 
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.2rem;
+    .card h3{
+      color:#16345f;
+      margin-bottom:10px;
+    }
+
+    .date{
+      color:#666;
+      margin-bottom:15px;
+      font-size:0.95rem;
+    }
+
+    ul{
+      padding-left:20px;
+    }
+
+    li{
+      margin-bottom:10px;
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .skill{
+      background:#2d5ea8;
+      color:white;
+      padding:10px 16px;
+      border-radius:30px;
+      font-size:14px;
+    }
+
+    .achievement-gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      margin-top:30px;
+    }
+
+    .placeholder{
+      height:220px;
+      background:#dfe8f5;
+      border-radius:15px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#666;
+      font-weight:bold;
+    }
+
+    footer{
+      background:#16345f;
+      color:white;
+      text-align:center;
+      padding:35px 20px;
+      margin-top:50px;
+    }
+
+    .contact a{
+      color:#2d5ea8;
+      text-decoration:none;
+    }
+
+    @media(max-width:768px){
+
+      .hero{
+        text-align:center;
       }
 
-      nav a {
-        display: inline-block;
-        margin: 8px;
+      .hero-text h1{
+        font-size:2.4rem;
+      }
+
+      .hero-image img{
+        width:250px;
+        height:250px;
+      }
+
+      nav a{
+        display:inline-block;
+        margin:8px;
       }
     }
+
   </style>
 </head>
 
 <body>
 
   <header>
-    <h1>Mehreen Tabassum</h1>
-    <p>
-      Electrical & Electronic Engineering Graduate | Technical Presales Engineer |
-      Interested in Data Science, Enterprise Networking, Information Security & Research
-    </p>
+
+    <div class="hero">
+
+      <div class="hero-text">
+
+        <h1>Mehreen Tabassum</h1>
+
+        <p>
+          Electrical & Electronic Engineering graduate with professional experience in
+          enterprise networking, ICT solutions, and technical presales engineering.
+          Passionate about data science, machine learning, information security,
+          sustainability-focused research, and technology-driven problem solving.
+        </p>
+
+      </div>
+
+      <div class="hero-image">
+
+        <!-- Save your image as profile.jpg in same folder -->
+        <img src="profile.jpg.jpeg" alt="Mehreen Tabassum">
+
+      </div>
+
+    </div>
+
   </header>
 
   <nav>
@@ -143,118 +238,312 @@
   </nav>
 
   <section id="about">
+
     <h2>About Me</h2>
 
     <div class="card">
+
       <p>
-        Enthusiastic Electrical and Electronic Engineering graduate with a strong interest in
-        analytical and technology-focused roles. Experienced in enterprise networking,
-        technical solution design, and research-driven projects involving machine learning
-        and renewable energy systems.
+        I am an Electrical and Electronic Engineering graduate from RUET with a growing
+        professional background in enterprise networking and ICT solution development.
+        My interests lie at the intersection of technology, analytics, and sustainability.
+        Through academic research and professional exposure, I have worked on machine
+        learning applications, renewable energy analysis, enterprise solution design,
+        and technical documentation for large-scale ICT ecosystems.
       </p>
+
+      <br>
+
+      <p>
+        Currently working as a Technical Presales Engineer, I collaborate with enterprise
+        partners to design scalable networking solutions, prepare RFP compliance documents,
+        and support technical decision-making processes. Alongside industry experience,
+        I actively pursue research-oriented learning in data science, AI, and
+        information security.
+      </p>
+
     </div>
+
   </section>
 
   <section id="education">
+
     <h2>Education</h2>
 
     <div class="card">
+
       <h3>Rajshahi University of Engineering & Technology (RUET)</h3>
-      <p>B.Sc. in Electrical & Electronic Engineering</p>
-      <p>2019 – 2024 | CGPA: 3.68 / 4.00</p>
+
+      <p class="date">
+        Bachelor of Science in Electrical & Electronic Engineering | 2019 – 2024
+      </p>
+
+      <p>
+        CGPA: 3.68 / 4.00 <br>
+        Last Semester GPA: 3.97 / 4.00
+      </p>
+
     </div>
 
     <div class="card">
+
       <h3>Rajuk Uttara Model College</h3>
-      <p>Higher Secondary Certificate (Science)</p>
+
+      <p class="date">Higher Secondary Certificate (Science)</p>
+
       <p>GPA: 5.00 / 5.00</p>
+
     </div>
+
   </section>
 
   <section id="experience">
+
     <h2>Professional Experience</h2>
 
     <div class="card">
-      <h3>Technical Presales Engineer – Inflow Technologies</h3>
-      <p>July 2025 – Present</p>
+
+      <h3>Technical Presales Engineer (Data Communication)</h3>
+
+      <p class="date">
+        Inflow Technologies Singapore Pte Ltd | July 2025 – Present
+      </p>
 
       <ul>
-        <li>Enterprise networking solution design and requirement analysis</li>
-        <li>RFP documentation and compliance preparation</li>
-        <li>BOQ preparation and technical benchmarking</li>
+        <li>
+          Analyze enterprise networking requirements and transform business needs into
+          structured technical solutions and system architectures.
+        </li>
+
+        <li>
+          Prepare technical proposals, RFP compliance matrices, comparative analyses,
+          and solution documentation for enterprise clients.
+        </li>
+
+        <li>
+          Conduct pricing validation, BOQ preparation, and solution benchmarking
+          to support data-driven technical and commercial decision-making.
+        </li>
+
+        <li>
+          Deliver technical enablement and knowledge-sharing sessions for channel partners.
+        </li>
+
+        <li>
+          Work closely with enterprise networking technologies and ICT infrastructure
+          ecosystems across different customer environments.
+        </li>
       </ul>
+
     </div>
 
     <div class="card">
-      <h3>Business Executive – Huawei Technologies Bangladesh</h3>
-      <p>July 2024 – June 2025</p>
+
+      <h3>Business Executive (Enterprise ICT)</h3>
+
+      <p class="date">
+        Huawei Technologies (Bangladesh) Ltd. | July 2024 – June 2025
+      </p>
 
       <ul>
-        <li>Worked with enterprise ICT clients</li>
-        <li>Collaborated on customized networking solutions</li>
-        <li>Exposure to large-scale ICT ecosystems</li>
+
+        <li>
+          Collaborated with enterprise clients to assess infrastructure modernization
+          and digital transformation requirements.
+        </li>
+
+        <li>
+          Worked alongside technical and solution teams to develop customized ICT solutions.
+        </li>
+
+        <li>
+          Gained hands-on exposure to enterprise networking concepts, system-level integration,
+          and large-scale ICT ecosystems.
+        </li>
+
+        <li>
+          Participated in solution planning discussions, client engagement activities,
+          and technical-business coordination.
+        </li>
+
       </ul>
+
     </div>
+
   </section>
 
   <section id="research">
-    <h2>Research & Publications</h2>
+
+    <h2>Research Experience & Publications</h2>
 
     <div class="card">
-      <h3>Early-Stage Dementia Prediction using Machine Learning</h3>
+
+      <h3>
+        Enhanced System for Predicting Early-Stage Dementia and Predictive Insights
+        from Multivariate Analysis
+      </h3>
+
+      <p class="date">Undergraduate Thesis</p>
 
       <p>
-        Undergraduate thesis focused on predictive analysis using multivariate clinical
-        and demographic datasets with multiple ML algorithms.
+        Conducted a machine learning-based research project focused on predicting
+        early-stage dementia using multivariate demographic and clinical datasets.
+        The research utilized a dataset containing 729 entries with multiple
+        predictive attributes.
       </p>
+
+      <br>
+
+      <ul>
+
+        <li>
+          Applied multiple machine learning algorithms for predictive modeling
+          and comparative performance evaluation.
+        </li>
+
+        <li>
+          Performed data preprocessing, feature analysis, visualization,
+          and model validation.
+        </li>
+
+        <li>
+          Extracted predictive insights and evaluated the applicability
+          of different models for clinical decision support systems.
+        </li>
+
+      </ul>
+
     </div>
 
     <div class="card">
-      <h3>Environmental Impacts on Photovoltaic Systems</h3>
+
+      <h3>
+        Evaluating Environmental Impacts and Proposed Solutions for Temperature
+        Effects of Photovoltaic Systems
+      </h3>
+
+      <p class="date">
+        Conference Paper – 10th International Conference on Power Systems (ICPS) 2023
+      </p>
 
       <p>
-        Conference paper presented at ICPS 2023 focusing on temperature effects on solar
-        panel performance and sustainability analysis.
+        Research focused on analyzing the effects of environmental temperature
+        on photovoltaic system performance and identifying sustainable mitigation approaches.
       </p>
+
+      <br>
+
+      <ul>
+
+        <li>
+          Conducted on-site data collection from installed photovoltaic systems
+          at university facilities.
+        </li>
+
+        <li>
+          Performed preprocessing and analytical evaluation of temperature-dependent
+          efficiency variations.
+        </li>
+
+        <li>
+          Collaborated within a multidisciplinary research team under faculty supervision.
+        </li>
+
+        <li>
+          Proposed practical recommendations to improve photovoltaic system
+          reliability and performance sustainability.
+        </li>
+
+      </ul>
+
     </div>
+
   </section>
 
   <section id="skills">
+
     <h2>Technical Skills</h2>
 
     <div class="skills">
+
       <div class="skill">Python</div>
       <div class="skill">Machine Learning</div>
       <div class="skill">Data Analysis</div>
+      <div class="skill">Data Visualization</div>
       <div class="skill">Enterprise Networking</div>
       <div class="skill">Technical Documentation</div>
-      <div class="skill">Data Visualization</div>
+      <div class="skill">Requirement Analysis</div>
       <div class="skill">MS Office</div>
       <div class="skill">Adobe Illustrator</div>
       <div class="skill">LaTeX</div>
+
     </div>
+
   </section>
 
   <section id="achievements">
-    <h2>Achievements</h2>
+
+    <h2>Achievements & Activities</h2>
 
     <div class="card">
+
       <ul>
-        <li>Huawei Seeds for the Future 2022 – Top 9 Bangladesh</li>
-        <li>Huawei Seeds Tour & MWC 2024 Barcelona – National Nominee</li>
-        <li>Outstanding Student Volunteer Award 2023 – IEEE Bangladesh Section</li>
-        <li>Runner-up – CLAP 2022 IEEE Region 10 Young Professionals</li>
-        <li>STEM Venture Award Winner (Top 5 Concepts)</li>
+
+        <li>Huawei Seeds for the Future 2022 — Top 9 Bangladesh</li>
+
+        <li>
+          Represented Bangladesh at the Global Round in Thailand
+        </li>
+
+        <li>
+          Huawei Seeds Tour & MWC 2024 Barcelona — National Nominee from Bangladesh
+        </li>
+
+        <li>
+          Outstanding Student Volunteer Award 2023 — IEEE Bangladesh Section
+        </li>
+
+        <li>
+          Runner-up, CLAP 2022 — IEEE Region 10 Young Professionals
+        </li>
+
+        <li>
+          STEM Venture Award Winner (Top 5 Concepts)
+        </li>
+
       </ul>
+
+      <div class="achievement-gallery">
+
+        <div class="placeholder">
+          Add Achievement Photo
+        </div>
+
+        <div class="placeholder">
+          Add Conference / Event Photo
+        </div>
+
+        <div class="placeholder">
+          Add Award Photo
+        </div>
+
+      </div>
+
     </div>
+
   </section>
 
   <section id="contact">
+
     <h2>Contact</h2>
 
     <div class="card contact">
+
       <p>Email: mehreen.te@gmail.com</p>
+
       <p>Location: Uttara, Dhaka, Bangladesh</p>
+
+      <br>
 
       <p>
         LinkedIn:
@@ -269,11 +558,17 @@
           github.com/Mehreen-te
         </a>
       </p>
+
     </div>
+
   </section>
 
   <footer>
-    <p>© 2026 Mehreen Tabassum | Portfolio Website</p>
+
+    <p>
+      © 2026 Mehreen Tabassum | Portfolio Website
+    </p>
+
   </footer>
 
 </body>
