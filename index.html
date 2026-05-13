@@ -19,30 +19,30 @@
 
     body{
 
-      font-family: 'Segoe UI', sans-serif;
+      font-family:'Segoe UI', sans-serif;
 
       background:
       linear-gradient(
         180deg,
-        #f8f6f3 0%,
-        #f2ede7 100%
+        #f8ffff 0%,
+        #e5ffff 100%
       );
 
-      color:#2d2d2d;
+      color:#1f2b2b;
 
-      line-height:1.7;
+      line-height:1.6;
 
       overflow-x:hidden;
     }
 
-    /* SMOOTH SCROLLBAR */
+    /* SCROLLBAR */
 
     ::-webkit-scrollbar{
-      width:8px;
+      width:7px;
     }
 
     ::-webkit-scrollbar-thumb{
-      background:#b8a89a;
+      background:#9ccaca;
       border-radius:20px;
     }
 
@@ -51,68 +51,67 @@
     nav{
 
       position:fixed;
-      top:18px;
+
+      top:16px;
       left:50%;
 
       transform:translateX(-50%);
-
-      width:auto;
 
       z-index:999;
 
       background:rgba(255,255,255,0.72);
 
-      backdrop-filter:blur(12px);
+      backdrop-filter:blur(10px);
 
       border:1px solid rgba(255,255,255,0.4);
 
-      border-radius:50px;
+      border-radius:40px;
 
-      padding:10px 18px;
+      padding:8px 14px;
 
       display:flex;
-      gap:10px;
+      gap:6px;
 
-      box-shadow:0 8px 30px rgba(0,0,0,0.05);
+      box-shadow:0 6px 24px rgba(0,0,0,0.05);
     }
 
     nav a{
 
       text-decoration:none;
 
-      color:#65584c;
+      color:#355454;
 
-      font-size:14px;
+      font-size:13px;
 
-      padding:10px 14px;
+      padding:8px 14px;
 
-      border-radius:25px;
+      border-radius:20px;
 
       transition:0.3s ease;
     }
 
     nav a.active{
 
-      background:#ded3c8;
+      background:#d4f4f4;
 
-      color:#3d342c;
+      color:#234040;
     }
 
     nav a:hover{
-      background:#eee5dc;
+      background:#edfefe;
     }
 
     /* HERO */
 
     header{
 
-      min-height:100vh;
+      min-height:92vh;
 
       display:flex;
       align-items:center;
       justify-content:center;
 
-      padding:80px 20px 40px;
+      padding:70px 20px 30px;
 
       position:relative;
 
@@ -127,19 +126,19 @@
 
       background:
       radial-gradient(circle at top left,
-      rgba(198,177,158,0.35),
-      transparent 28%),
+      rgba(180,240,240,0.45),
+      transparent 30%),
 
       radial-gradient(circle at bottom right,
-      rgba(170,154,140,0.28),
-      transparent 25%);
+      rgba(140,220,220,0.30),
+      transparent 26%);
 
       z-index:0;
     }
 
     .hero{
 
-      max-width:1150px;
+      max-width:1100px;
 
       width:100%;
 
@@ -147,7 +146,7 @@
       align-items:center;
       justify-content:space-between;
 
-      gap:80px;
+      gap:60px;
 
       flex-wrap:wrap;
 
@@ -158,15 +157,15 @@
 
     .hero-image img{
 
-      width:340px;
-      height:340px;
+      width:300px;
+      height:300px;
 
       object-fit:cover;
 
-      border-radius:28px;
+      border-radius:24px;
 
       box-shadow:
-      0 20px 45px rgba(0,0,0,0.12);
+      0 15px 40px rgba(0,0,0,0.08);
 
       animation:float 5s ease-in-out infinite;
     }
@@ -178,7 +177,7 @@
       }
 
       50%{
-        transform:translateY(-10px);
+        transform:translateY(-8px);
       }
 
       100%{
@@ -190,58 +189,58 @@
     .hero-text{
 
       flex:1;
-      min-width:320px;
+      min-width:300px;
     }
 
     .hero-text h1{
 
-      font-size:4.3rem;
+      font-size:4rem;
 
       line-height:1.05;
 
-      color:#3d342c;
+      color:#204242;
 
-      margin-bottom:14px;
+      margin-bottom:10px;
     }
 
     .hero-text .subtitle{
 
-      color:#8d7f72;
+      color:#5d8080;
 
-      margin-bottom:26px;
-
-      letter-spacing:1px;
+      margin-bottom:18px;
 
       font-size:0.95rem;
+
+      letter-spacing:1px;
     }
 
     .hero-text p{
 
-      max-width:650px;
+      max-width:620px;
 
-      font-size:1.08rem;
+      font-size:1.03rem;
 
-      color:#4b433d;
+      color:#345353;
     }
 
     /* SECTION */
 
     section{
 
-      max-width:1100px;
+      max-width:1050px;
 
       margin:auto;
 
-      padding:60px 20px;
+      padding:30px 20px;
     }
 
     h2{
 
-      font-size:2rem;
+      font-size:1.9rem;
 
-      margin-bottom:28px;
+      margin-bottom:18px;
 
-      color:#3d342c;
+      color:#244545;
 
       position:relative;
     }
@@ -250,15 +249,15 @@
 
       content:'';
 
-      width:65px;
+      width:55px;
       height:3px;
 
-      background:#b8a89a;
+      background:#93d8d8;
 
       position:absolute;
 
       left:0;
-      bottom:-10px;
+      bottom:-8px;
 
       border-radius:20px;
     }
@@ -267,48 +266,48 @@
 
     .card{
 
-      background:rgba(255,255,255,0.7);
+      background:rgba(255,255,255,0.68);
 
-      backdrop-filter:blur(10px);
+      backdrop-filter:blur(8px);
 
-      border:1px solid rgba(255,255,255,0.4);
+      border:1px solid rgba(255,255,255,0.35);
 
-      border-radius:24px;
+      border-radius:20px;
 
-      padding:28px;
+      padding:22px;
 
-      margin-bottom:18px;
+      margin-bottom:14px;
 
       box-shadow:
-      0 10px 35px rgba(0,0,0,0.04);
+      0 8px 25px rgba(0,0,0,0.03);
 
-      transition:0.35s ease;
+      transition:0.3s ease;
     }
 
     .card:hover{
 
-      transform:translateY(-4px);
+      transform:translateY(-3px);
 
       box-shadow:
-      0 15px 45px rgba(0,0,0,0.07);
+      0 12px 30px rgba(0,0,0,0.05);
     }
 
     .card h3{
 
-      color:#4a4038;
+      color:#285050;
 
-      margin-bottom:8px;
+      margin-bottom:6px;
 
-      font-size:1.25rem;
+      font-size:1.12rem;
     }
 
     .date{
 
-      color:#938679;
+      color:#709090;
 
-      font-size:0.95rem;
+      font-size:0.92rem;
 
-      margin-bottom:14px;
+      margin-bottom:10px;
     }
 
     .card ul{
@@ -316,7 +315,7 @@
     }
 
     .card li{
-      margin-bottom:10px;
+      margin-bottom:8px;
     }
 
     /* EDUCATION */
@@ -324,7 +323,7 @@
     .education-grid{
       display:flex;
       flex-direction:column;
-      gap:14px;
+      gap:10px;
     }
 
     .mini-edu{
@@ -333,13 +332,13 @@
       justify-content:space-between;
       align-items:center;
 
-      padding-top:8px;
+      padding-top:4px;
 
-      color:#5f544b;
+      color:#466767;
     }
 
     .mini-edu small{
-      color:#9b8d80;
+      color:#7d9d9d;
     }
 
     /* SKILLS */
@@ -349,22 +348,22 @@
       display:flex;
       flex-wrap:wrap;
 
-      gap:10px;
+      gap:8px;
 
-      margin-top:18px;
+      margin-top:14px;
     }
 
     .skill{
 
-      background:#e6ddd4;
+      background:#d9f7f7;
 
-      color:#5c5045;
+      color:#355454;
 
-      padding:10px 15px;
+      padding:8px 14px;
 
-      border-radius:30px;
+      border-radius:20px;
 
-      font-size:14px;
+      font-size:13px;
     }
 
     /* CAROUSEL */
@@ -375,9 +374,9 @@
 
       overflow:hidden;
 
-      border-radius:22px;
+      border-radius:18px;
 
-      margin-top:28px;
+      margin-top:22px;
 
       position:relative;
     }
@@ -395,7 +394,7 @@
 
       width:100%;
 
-      height:450px;
+      height:400px;
 
       object-fit:cover;
     }
@@ -432,7 +431,7 @@
 
     .contact a{
 
-      color:#7f6d5e;
+      color:#467474;
 
       text-decoration:none;
     }
@@ -443,11 +442,11 @@
 
       text-align:center;
 
-      padding:30px;
+      padding:24px;
 
-      color:#7f7267;
+      color:#688888;
 
-      font-size:14px;
+      font-size:13px;
     }
 
     /* MOBILE */
@@ -458,7 +457,7 @@
 
         width:92%;
 
-        overflow-x:auto;
+    overflow-x:auto;
 
         justify-content:flex-start;
       }
@@ -469,13 +468,13 @@
 
         justify-content:center;
 
-        gap:40px;
+        gap:35px;
       }
 
       .hero-image img{
 
-        width:260px;
-        height:260px;
+        width:240px;
+        height:240px;
       }
 
       .hero-text h1{
@@ -483,13 +482,13 @@
       }
 
       .carousel-track img{
-        height:260px;
+        height:240px;
       }
 
       .mini-edu{
         flex-direction:column;
         align-items:flex-start;
-        gap:4px;
+        gap:3px;
       }
 
     }
@@ -627,7 +626,7 @@
 
           <div>
 
-            <strong>Higher Secondary Certificate (HSC)</strong>
+            <strong>HSC</strong>
             <br>
             <small>Rajuk Uttara Model College</small>
 
@@ -639,13 +638,13 @@
 
         </div>
 
-        <hr style="margin:16px 0;border:none;height:1px;background:#ece5de;">
+        <hr style="margin:14px 0;border:none;height:1px;background:#dff1f1;">
 
         <div class="mini-edu">
 
           <div>
 
-            <strong>Secondary School Certificate (SSC)</strong>
+            <strong>SSC</strong>
             <br>
             <small>Rajuk Uttara Model College</small>
 
@@ -682,27 +681,22 @@
       <ul>
 
         <li>
-          Analyze enterprise networking requirements and transform
-          business needs into structured technical solutions and system architectures.
+          Analyze enterprise networking requirements and design
+          structured technical solutions for enterprise environments.
         </li>
 
         <li>
-          Prepare technical proposals, RFP compliance matrices,
+          Prepare RFP compliance matrices, BOQs,
           comparative analyses, and solution documentation.
         </li>
 
         <li>
-          Conduct pricing validation, BOQ preparation,
-          and technical benchmarking for enterprise solutions.
+          Conduct technical enablement sessions
+          and support partner solution development.
         </li>
 
         <li>
-          Deliver technical knowledge-sharing and enablement sessions
-          for partners and stakeholders.
-        </li>
-
-        <li>
-          Work closely with enterprise networking technologies
+          Work with enterprise networking technologies
           and ICT infrastructure ecosystems.
         </li>
 
@@ -723,23 +717,18 @@
       <ul>
 
         <li>
-          Collaborated with enterprise clients to assess
-          infrastructure modernization and digital transformation requirements.
+          Collaborated with enterprise clients for infrastructure
+          modernization and digital transformation initiatives.
         </li>
 
         <li>
-          Worked alongside technical and solution teams
-          to develop customized ICT solutions.
+          Worked alongside technical teams to develop
+          customized enterprise ICT solutions.
         </li>
 
         <li>
-          Gained exposure to enterprise networking concepts,
-          large-scale ICT ecosystems, and system-level integration.
-        </li>
-
-        <li>
-          Participated in technical-business coordination
-          and enterprise solution planning activities.
+          Participated in technical-business coordination,
+          planning, and solution assessment activities.
         </li>
 
       </ul>
@@ -768,8 +757,6 @@
 
         Conducted machine learning-based research focused on predicting
         early-stage dementia using multivariate demographic and clinical datasets.
-        The research utilized datasets with multiple predictive attributes
-        and involved comparative analysis of multiple ML models.
 
       </p>
 
@@ -778,18 +765,17 @@
       <ul>
 
         <li>
-          Applied machine learning algorithms for predictive modeling
-          and comparative performance evaluation.
+          Applied multiple machine learning algorithms
+          for predictive modeling and performance comparison.
         </li>
 
         <li>
-          Performed preprocessing, feature analysis,
-          visualization, and model validation.
+          Performed preprocessing, visualization,
+          feature analysis, and validation.
         </li>
 
         <li>
-          Extracted predictive insights and evaluated model applicability
-          for clinical decision support systems.
+          Extracted predictive insights from multivariate datasets.
         </li>
 
       </ul>
@@ -817,9 +803,8 @@
 
       <p>
 
-        Research focused on evaluating the effects of environmental
-        temperature on photovoltaic system performance and identifying
-        sustainable mitigation approaches for renewable energy systems.
+        Research focused on evaluating temperature impacts
+        on photovoltaic system efficiency and sustainability.
 
       </p>
 
@@ -828,17 +813,16 @@
       <ul>
 
         <li>
-          Conducted on-site data collection from installed photovoltaic systems.
+          Conducted data collection from photovoltaic systems.
         </li>
 
         <li>
-          Performed preprocessing and analytical evaluation
-          of temperature-dependent efficiency variations.
+          Performed analytical evaluation of efficiency variations.
         </li>
 
         <li>
-          Proposed practical recommendations to improve
-          photovoltaic system reliability and sustainability.
+          Proposed sustainable mitigation approaches
+          for renewable energy systems.
         </li>
 
       </ul>
@@ -875,7 +859,7 @@
         </li>
 
         <li>
-          Huawei Seeds Tour & MWC 2024 Barcelona — National Nominee from Bangladesh
+          Huawei Seeds Tour & MWC 2024 Barcelona — National Nominee
         </li>
 
         <li>
@@ -891,8 +875,6 @@
         </li>
 
       </ul>
-
-      <!-- ADD YOUR IMAGES HERE -->
 
       <div class="carousel">
 
@@ -964,7 +946,7 @@
 
   </footer>
 
-  <!-- ACTIVE NAV -->
+  <!-- ACTIVE NAVIGATION -->
 
   <script>
 
@@ -977,7 +959,7 @@
 
       sections.forEach(section => {
 
-        const sectionTop = section.offsetTop - 150;
+        const sectionTop = section.offsetTop - 120;
 
         if(pageYOffset >= sectionTop){
           current = section.getAttribute("id");
