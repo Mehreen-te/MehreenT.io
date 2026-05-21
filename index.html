@@ -3,10 +3,10 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Mehreen Tabassum | Portfolio</title>
+  <title>Mehreen Tabassum</title>
 
   <style>
 
@@ -19,31 +19,13 @@
 
     body{
 
-      font-family:'Segoe UI', sans-serif;
+      font-family:Arial, sans-serif;
 
-      background:
-      linear-gradient(
-        180deg,
-        #f8fafb 0%,
-        #f1f5f6 100%
-      );
+      background:#f7f9fa;
 
-      color:#1f2d2f;
+      color:#222;
 
       line-height:1.6;
-
-      overflow-x:hidden;
-    }
-
-    /* SCROLLBAR */
-
-    ::-webkit-scrollbar{
-      width:7px;
-    }
-
-    ::-webkit-scrollbar-thumb{
-      background:#9ab4b7;
-      border-radius:20px;
     }
 
     /* NAVBAR */
@@ -52,27 +34,29 @@
 
       position:fixed;
 
-      top:16px;
-      left:50%;
+      top:0;
+      width:100%;
 
-      transform:translateX(-50%);
+      background:white;
+
+      border-bottom:1px solid #e4e4e4;
 
       z-index:999;
+    }
 
-      background:rgba(255,255,255,0.72);
+    .nav-container{
 
-      backdrop-filter:blur(10px);
+      max-width:1100px;
 
-      border:1px solid rgba(255,255,255,0.4);
-
-      border-radius:40px;
-
-      padding:8px 14px;
+      margin:auto;
 
       display:flex;
-      gap:6px;
 
-      box-shadow:0 6px 24px rgba(0,0,0,0.05);
+      justify-content:center;
+
+      gap:10px;
+
+      padding:14px 20px;
     }
 
     nav a{
@@ -81,91 +65,58 @@
 
       color:#2f5d62;
 
-      font-size:13px;
-
       padding:8px 14px;
 
-      border-radius:20px;
+      border-radius:6px;
 
-      transition:0.3s ease;
+      transition:0.3s;
     }
 
     nav a.active{
 
-      background:#d6e4e5;
-
-      color:#234040;
+      background:#dce8ea;
     }
 
     nav a:hover{
-      background:#edf3f4;
+
+      background:#eef4f5;
+    }
+
+    /* MAIN */
+
+    .container{
+
+      max-width:1050px;
+
+      margin:auto;
+
+      padding:90px 25px 50px;
     }
 
     /* HERO */
 
-    header{
-
-      min-height:92vh;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-
-      padding:70px 20px 30px;
-
-      position:relative;
-
-      overflow:hidden;
-    }
-
-    .gradient-bg{
-
-      position:absolute;
-
-      inset:0;
-
-      background:
-      radial-gradient(circle at top left,
-      rgba(170,200,205,0.30),
-      transparent 30%),
-
-      radial-gradient(circle at bottom right,
-      rgba(130,170,175,0.20),
-      transparent 26%);
-
-      z-index:0;
-    }
-
     .hero{
 
-      max-width:1100px;
+      display:grid;
+
+      grid-template-columns:280px 1fr;
+
+      gap:45px;
+
+      align-items:center;
+
+      margin-bottom:50px;
+    }
+
+    .hero img{
 
       width:100%;
 
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-
-      gap:60px;
-
-      flex-wrap:wrap;
-
-      position:relative;
-
-      z-index:2;
-    }
-
-    .hero-image img{
-
-      width:300px;
-      height:300px;
+      border-radius:10px;
 
       object-fit:cover;
 
-      border-radius:24px;
-
-      box-shadow:
-      0 15px 40px rgba(0,0,0,0.08);
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
 
       animation:float 5s ease-in-out infinite;
     }
@@ -177,7 +128,7 @@
       }
 
       50%{
-        transform:translateY(-8px);
+        transform:translateY(-6px);
       }
 
       100%{
@@ -186,159 +137,99 @@
 
     }
 
-    .hero-text{
+    .hero h1{
 
-      flex:1;
-      min-width:300px;
-    }
-
-    .hero-text h1{
-
-      font-size:4rem;
-
-      line-height:1.05;
+      font-size:3rem;
 
       color:#2f5d62;
 
-      margin-bottom:10px;
+      margin-bottom:8px;
     }
 
-    .hero-text .subtitle{
+    .hero h3{
 
-      color:#668084;
+      color:#5d7376;
+
+      font-weight:normal;
 
       margin-bottom:18px;
-
-      font-size:0.95rem;
-
-      letter-spacing:1px;
     }
 
-    .hero-text p{
+    .hero p{
 
-      max-width:620px;
+      color:#444;
 
-      font-size:1.03rem;
-
-      color:#43585b;
+      max-width:700px;
     }
 
-    /* SECTION */
+    /* SECTIONS */
 
     section{
 
-      max-width:1050px;
-
-      margin:auto;
-
-      padding:30px 20px;
+      margin-bottom:40px;
     }
 
-    h2{
+    section h2{
 
-      font-size:1.9rem;
-
-      margin-bottom:18px;
+      font-size:1.7rem;
 
       color:#2f5d62;
 
-      position:relative;
+      margin-bottom:18px;
+
+      border-bottom:2px solid #d9e5e7;
+
+      padding-bottom:8px;
     }
 
-    h2::after{
-
-      content:'';
-
-      width:55px;
-      height:3px;
-
-      background:#7ea6aa;
-
-      position:absolute;
-
-      left:0;
-      bottom:-8px;
-
-      border-radius:20px;
-    }
-
-    /* CARD */
+    /* CARDS */
 
     .card{
 
-      background:rgba(255,255,255,0.75);
-
-      backdrop-filter:blur(8px);
-
-      border:1px solid rgba(255,255,255,0.45);
-
-      border-radius:20px;
-
-      padding:22px;
-
-      margin-bottom:14px;
-
-      box-shadow:
-      0 8px 25px rgba(0,0,0,0.03);
-
-      transition:0.3s ease;
-    }
-
-    .card:hover{
-
-      transform:translateY(-3px);
-
-      box-shadow:
-      0 12px 30px rgba(0,0,0,0.05);
+      margin-bottom:18px;
     }
 
     .card h3{
 
       color:#2f5d62;
 
-      margin-bottom:6px;
-
-      font-size:1.12rem;
+      margin-bottom:4px;
     }
 
     .date{
 
-      color:#70878a;
+      color:#6f7d80;
 
       font-size:0.92rem;
 
       margin-bottom:10px;
     }
 
-    .card ul{
-      padding-left:18px;
+    ul{
+
+      padding-left:20px;
     }
 
-    .card li{
+    li{
+
       margin-bottom:8px;
     }
 
     /* EDUCATION */
 
-    .education-grid{
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-    }
-
-    .mini-edu{
+    .edu-small{
 
       display:flex;
+
       justify-content:space-between;
-      align-items:center;
 
-      padding-top:4px;
+      border-top:1px solid #e6ecec;
 
-      color:#4f6669;
-    }
+      padding-top:10px;
 
-    .mini-edu small{
-      color:#80989b;
+      margin-top:10px;
+
+      color:#555;
     }
 
     /* SKILLS */
@@ -346,39 +237,36 @@
     .skills{
 
       display:flex;
+
       flex-wrap:wrap;
 
-      gap:8px;
+      gap:10px;
 
-      margin-top:14px;
+      margin-top:15px;
     }
 
     .skill{
 
-      background:#dbe7e8;
+      background:#e3edef;
 
       color:#2f5d62;
 
-      padding:8px 14px;
+      padding:7px 14px;
 
       border-radius:20px;
 
-      font-size:13px;
+      font-size:14px;
     }
 
     /* CAROUSEL */
 
     .carousel{
 
-      width:100%;
+      margin-top:20px;
 
       overflow:hidden;
 
-      border-radius:18px;
-
-      margin-top:22px;
-
-      position:relative;
+      border-radius:10px;
     }
 
     .carousel-track{
@@ -387,7 +275,7 @@
 
       width:300%;
 
-      animation:slide 14s infinite;
+      animation:slide 15s infinite;
     }
 
     .carousel-track img{
@@ -405,19 +293,19 @@
         transform:translateX(0);
       }
 
-      28%{
+      30%{
         transform:translateX(0);
       }
 
-      33%{
+      35%{
         transform:translateX(-100%);
       }
 
-      61%{
+      65%{
         transform:translateX(-100%);
       }
 
-      66%{
+      70%{
         transform:translateX(-200%);
       }
 
@@ -428,6 +316,11 @@
     }
 
     /* CONTACT */
+
+    .contact p{
+
+      margin-bottom:8px;
+    }
 
     .contact a{
 
@@ -442,53 +335,53 @@
 
       text-align:center;
 
-      padding:24px;
+      padding:30px 10px;
 
-      color:#6b7d80;
+      color:#888;
 
-      font-size:13px;
+      font-size:14px;
     }
 
     /* MOBILE */
 
     @media(max-width:768px){
 
-      nav{
+      .hero{
 
-        width:92%;
+        grid-template-columns:1fr;
+
+        text-align:center;
+      }
+
+      .hero img{
+
+        max-width:250px;
+
+        margin:auto;
+      }
+
+      .hero h1{
+
+        font-size:2.3rem;
+      }
+
+      .carousel-track img{
+
+        height:240px;
+      }
+
+      .edu-small{
+
+        flex-direction:column;
+
+        gap:5px;
+      }
+
+      .nav-container{
 
         overflow-x:auto;
 
         justify-content:flex-start;
-      }
-
-      .hero{
-
-        text-align:center;
-
-        justify-content:center;
-
-        gap:35px;
-      }
-
-      .hero-image img{
-
-        width:240px;
-        height:240px;
-      }
-
-      .hero-text h1{
-        font-size:2.8rem;
-      }
-
-      .carousel-track img{
-        height:240px;
-      }
-
-      .mini-edu{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:3px;
       }
 
     }
@@ -503,43 +396,42 @@
 
   <nav>
 
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#research">Research</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#contact">Contact</a>
+    <div class="nav-container">
+
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+
+    </div>
 
   </nav>
 
-  <!-- HERO -->
+  <div class="container">
 
-  <header>
+    <!-- HERO -->
 
-    <div class="gradient-bg"></div>
+    <div class="hero" id="about">
 
-    <div class="hero">
+      <img src="profile.jpg.jpeg" alt="Mehreen Tabassum">
 
-      <div class="hero-image">
-
-        <img src="profile.jpg.jpeg" alt="Mehreen Tabassum">
-
-      </div>
-
-      <div class="hero-text">
+      <div>
 
         <h1>Mehreen Tabassum</h1>
 
-        <p class="subtitle">
+        <h3>
           Engineer • Research Enthusiast • Technology Professional
-        </p>
+        </h3>
 
         <p>
 
           Electrical & Electronic Engineering graduate currently pursuing
           MSc in Management of Technology at IAT, BUET.
-          Interested in renewable energy, artificial intelligence,
-          machine learning, data analytics, and enterprise networking.
+          Interested in renewable energy, data analytics,
+          artificial intelligence, machine learning,
+          sustainability, and enterprise networking technologies.
 
         </p>
 
@@ -547,56 +439,19 @@
 
     </div>
 
-  </header>
+    <!-- EDUCATION -->
 
-  <!-- ABOUT -->
+    <section id="education">
 
-  <section id="about">
-
-    <h2>About Me</h2>
-
-    <div class="card">
-
-      <p>
-
-        Enthusiastic Electrical & Electronic Engineering graduate with
-        professional experience in enterprise networking and ICT solutions.
-        Currently working in technical presales while pursuing postgraduate
-        studies in Management of Technology.
-
-      </p>
-
-      <br>
-
-      <p>
-
-        Passionate about interdisciplinary research involving renewable energy,
-        data analytics, AI, machine learning, sustainability,
-        and technology-driven systems.
-
-      </p>
-
-    </div>
-
-  </section>
-
-  <!-- EDUCATION -->
-
-  <section id="education">
-
-    <h2>Education</h2>
-
-    <div class="education-grid">
+      <h2>Education</h2>
 
       <div class="card">
 
-        <h3>
-          MSc in Management of Technology
-        </h3>
+        <h3>MSc in Management of Technology</h3>
 
-        <p class="date">
+        <div class="date">
           Institute of Appropriate Technology (IAT), BUET | Oct 2025 – Present
-        </p>
+        </div>
 
         <p>
           CGPA: 4.00 / 4.00 (up to 2nd Semester)
@@ -606,13 +461,11 @@
 
       <div class="card">
 
-        <h3>
-          BSc in Electrical & Electronic Engineering
-        </h3>
+        <h3>BSc in Electrical & Electronic Engineering</h3>
 
-        <p class="date">
+        <div class="date">
           RUET | 2019 – 2024
-        </p>
+        </div>
 
         <p>
           CGPA: 3.68 / 4.00
@@ -620,259 +473,172 @@
 
       </div>
 
+      <div class="edu-small">
+
+        <div>
+          <strong>HSC</strong><br>
+          Rajuk Uttara Model College
+        </div>
+
+        <div>
+          GPA 5.00
+        </div>
+
+      </div>
+
+      <div class="edu-small">
+
+        <div>
+          <strong>SSC</strong><br>
+          Rajuk Uttara Model College
+        </div>
+
+        <div>
+          GPA 5.00
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- EXPERIENCE -->
+
+    <section id="experience">
+
+      <h2>Professional Experience</h2>
+
       <div class="card">
 
-        <div class="mini-edu">
+        <h3>
+          Technical Presales Engineer (Data Communication)
+        </h3>
 
-          <div>
+        <div class="date">
+          Inflow Technologies Singapore Pte Ltd | July 2025 – Present
+        </div>
 
-            <strong>HSC</strong>
-            <br>
-            <small>Rajuk Uttara Model College</small>
+        <ul>
 
-          </div>
+          <li>
+            Analyze enterprise networking requirements
+            and design structured technical solutions.
+          </li>
 
-          <div>
-            GPA 5.00
-          </div>
+          <li>
+            Prepare RFP responses, BOQs,
+            technical documentation, and solution proposals.
+          </li>
+
+          <li>
+            Work with enterprise networking and ICT ecosystems.
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="card">
+
+        <h3>
+          Business Executive (Enterprise ICT)
+        </h3>
+
+        <div class="date">
+          Huawei Technologies Bangladesh Ltd. | July 2024 – June 2025
+        </div>
+
+        <ul>
+
+          <li>
+            Worked with enterprise clients for ICT solution development.
+          </li>
+
+          <li>
+            Participated in digital transformation
+            and infrastructure modernization initiatives.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+    <!-- RESEARCH -->
+
+    <section id="research">
+
+      <h2>Research Experience</h2>
+
+      <div class="card">
+
+        <h3>
+          Enhanced System for Predicting Early-Stage Dementia and Predictive Insights from Multivariate Analysis
+        </h3>
+
+        <div class="date">
+          Undergraduate Thesis
+        </div>
+
+        <p>
+
+          Conducted machine learning-based predictive analysis
+          using multivariate clinical and demographic datasets.
+
+        </p>
+
+        <div class="skills">
+
+          <div class="skill">Machine Learning</div>
+          <div class="skill">Python</div>
+          <div class="skill">Data Analytics</div>
+          <div class="skill">Predictive Modeling</div>
 
         </div>
 
-        <hr style="margin:14px 0;border:none;height:1px;background:#e1ecec;">
+      </div>
 
-        <div class="mini-edu">
+      <div class="card">
 
-          <div>
+        <h3>
+          Evaluating Environmental Impacts and Proposed Solutions for Temperature Effects of Photovoltaic Systems
+        </h3>
 
-            <strong>SSC</strong>
-            <br>
-            <small>Rajuk Uttara Model College</small>
+        <div class="date">
+          Conference Paper — ICPS 2023
+        </div>
 
-          </div>
+        <p>
 
-          <div>
-            GPA 5.00
-          </div>
+          Research focused on photovoltaic system efficiency,
+          environmental impacts, and sustainable mitigation strategies.
+
+        </p>
+
+        <div class="skills">
+
+          <div class="skill">Renewable Energy</div>
+          <div class="skill">Solar Energy</div>
+          <div class="skill">Sustainability</div>
 
         </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
+    <!-- ACHIEVEMENTS -->
 
-  <!-- EXPERIENCE -->
+    <section id="achievements">
 
-  <section id="experience">
-
-    <h2>Professional Experience</h2>
-
-    <div class="card">
-
-      <h3>
-        Technical Presales Engineer (Data Communication)
-      </h3>
-
-      <p class="date">
-        Inflow Technologies Singapore Pte Ltd | July 2025 – Present
-      </p>
+      <h2>Achievements</h2>
 
       <ul>
 
-        <li>
-          Analyze enterprise networking requirements and design
-          structured technical solutions for enterprise environments.
-        </li>
-
-        <li>
-          Prepare RFP compliance matrices, BOQs,
-          comparative analyses, and solution documentation.
-        </li>
-
-        <li>
-          Conduct technical enablement sessions
-          and support partner solution development.
-        </li>
-
-        <li>
-          Work with enterprise networking technologies
-          and ICT infrastructure ecosystems.
-        </li>
-
-      </ul>
-
-    </div>
-
-    <div class="card">
-
-      <h3>
-        Business Executive (Enterprise ICT)
-      </h3>
-
-      <p class="date">
-        Huawei Technologies Bangladesh Ltd. | July 2024 – June 2025
-      </p>
-
-      <ul>
-
-        <li>
-          Collaborated with enterprise clients for infrastructure
-          modernization and digital transformation initiatives.
-        </li>
-
-        <li>
-          Worked alongside technical teams to develop
-          customized enterprise ICT solutions.
-        </li>
-
-        <li>
-          Participated in technical-business coordination,
-          planning, and solution assessment activities.
-        </li>
-
-      </ul>
-
-    </div>
-
-  </section>
-
-  <!-- RESEARCH -->
-
-  <section id="research">
-
-    <h2>Research Experience</h2>
-
-    <div class="card">
-
-      <h3>
-        Enhanced System for Predicting Early-Stage Dementia and Predictive Insights from Multivariate Analysis
-      </h3>
-
-      <p class="date">
-        Undergraduate Thesis
-      </p>
-
-      <p>
-
-        Conducted machine learning-based research focused on predicting
-        early-stage dementia using multivariate demographic and clinical datasets.
-
-      </p>
-
-      <br>
-
-      <ul>
-
-        <li>
-          Applied multiple machine learning algorithms
-          for predictive modeling and performance comparison.
-        </li>
-
-        <li>
-          Performed preprocessing, visualization,
-          feature analysis, and validation.
-        </li>
-
-        <li>
-          Extracted predictive insights from multivariate datasets.
-        </li>
-
-      </ul>
-
-      <div class="skills">
-
-        <div class="skill">Machine Learning</div>
-        <div class="skill">Python</div>
-        <div class="skill">Data Analytics</div>
-        <div class="skill">Predictive Modeling</div>
-
-      </div>
-
-    </div>
-
-    <div class="card">
-
-      <h3>
-        Evaluating Environmental Impacts and Proposed Solutions for Temperature Effects of Photovoltaic Systems
-      </h3>
-
-      <p class="date">
-        Conference Paper — ICPS 2023
-      </p>
-
-      <p>
-
-        Research focused on evaluating temperature impacts
-        on photovoltaic system efficiency and sustainability.
-
-      </p>
-
-      <br>
-
-      <ul>
-
-        <li>
-          Conducted data collection from photovoltaic systems.
-        </li>
-
-        <li>
-          Performed analytical evaluation of efficiency variations.
-        </li>
-
-        <li>
-          Proposed sustainable mitigation approaches
-          for renewable energy systems.
-        </li>
-
-      </ul>
-
-      <div class="skills">
-
-        <div class="skill">Renewable Energy</div>
-        <div class="skill">Solar Energy</div>
-        <div class="skill">Data Analysis</div>
-        <div class="skill">Sustainability</div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ACHIEVEMENTS -->
-
-  <section id="achievements">
-
-    <h2>Achievements</h2>
-
-    <div class="card">
-
-      <ul>
-
-        <li>
-          Huawei Seeds for the Future 2022 — Top 9 Bangladesh
-        </li>
-
-        <li>
-          Represented Bangladesh at the Global Round in Thailand
-        </li>
-
-        <li>
-          Huawei Seeds Tour & MWC 2024 Barcelona — National Nominee
-        </li>
-
-        <li>
-          Outstanding Student Volunteer Award 2023 — IEEE Bangladesh Section
-        </li>
-
-        <li>
-          Runner-up, CLAP 2022 — IEEE Region 10 Young Professionals
-        </li>
-
-        <li>
-          STEM Venture Award Winner (Top 5 Concepts)
-        </li>
+        <li>Huawei Seeds for the Future 2022 — Top 9 Bangladesh</li>
+        <li>Represented Bangladesh at Global Round in Thailand</li>
+        <li>MWC Barcelona 2024 — National Nominee</li>
+        <li>Outstanding Student Volunteer Award 2023 — IEEE Bangladesh</li>
 
       </ul>
 
@@ -888,65 +654,57 @@
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
+    <!-- CONTACT -->
 
-  <!-- CONTACT -->
+    <section id="contact">
 
-  <section id="contact">
+      <h2>Contact</h2>
 
-    <h2>Contact</h2>
+      <div class="contact">
 
-    <div class="card contact">
+        <p>
+          <strong>Location:</strong> Dhaka, Bangladesh
+        </p>
 
-      <p>
-        <strong>Location:</strong> Dhaka, Bangladesh
-      </p>
+        <p>
+          <strong>Email:</strong> mehreen.te@gmail.com
+        </p>
 
-      <br>
+        <p>
 
-      <p>
-        <strong>Email:</strong> mehreen.te@gmail.com
-      </p>
+          <strong>LinkedIn:</strong>
 
-      <br>
+          <a href="https://linkedin.com/in/mehreen-tabassum">
+            linkedin.com/in/mehreen-tabassum
+          </a>
 
-      <p>
+        </p>
 
-        <strong>LinkedIn:</strong>
+        <p>
 
-        <a href="https://linkedin.com/in/mehreen-tabassum" target="_blank">
-          linkedin.com/in/mehreen-tabassum
-        </a>
+          <strong>GitHub:</strong>
 
-      </p>
+          <a href="https://github.com/Mehreen-te">
+            github.com/Mehreen-te
+          </a>
 
-      <br>
+        </p>
 
-      <p>
+      </div>
 
-        <strong>GitHub:</strong>
+    </section>
 
-        <a href="https://github.com/Mehreen-te" target="_blank">
-          github.com/Mehreen-te
-        </a>
-
-      </p>
-
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
+  </div>
 
   <footer>
 
-    © 2026 Mehreen Tabassum | Portfolio Website
+    © 2026 Mehreen Tabassum
 
   </footer>
 
-  <!-- ACTIVE NAVIGATION -->
+  <!-- ACTIVE NAV -->
 
   <script>
 
@@ -959,7 +717,7 @@
 
       sections.forEach(section => {
 
-        const sectionTop = section.offsetTop - 120;
+        const sectionTop = section.offsetTop - 140;
 
         if(pageYOffset >= sectionTop){
           current = section.getAttribute("id");
